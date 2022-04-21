@@ -1,30 +1,36 @@
 <article class="content">
     <div class="flex flex-col mb-8 sm:flex-row sm:items-center">
-        <div class="flex-1 pr-5 text-sm">
+        <div class="flex-1 pr-5">
             {{ if publication:show_post_author }}
                 Written by <b class="text-white">{{ author:name }}</b><br>
-                <span class="">on {{ date }}</span>
+                <span class="text-zinc-500 font-medium">on {{ date }}</span>
             {{ else }}
-                <span class="">{{ date }}</span>
+                <span class="text-zinc-500 font-medium">{{ date }}</span>
             {{ /if }}
         </div>
 
         {{ if tags }}
             <div class="mt-5 flex-wrap inline-flex items-center">
                 {{ tags }}
-                    <a href="{{ url }}" class="rounded-xl bg-emerald-900/50 text-sm px-3 py-1 text-white transition-colors hover:bg-emerald-900/80 mr-2 mb-2 last:mr-0">
-                        {{ title }}
+                    <a href="{{ url }}" class="rounded-3xl bg-gradient-to-r from-palmiak_blue to-palmiak_green font-palmiak-font uppercase tracking-wider text-xs px-0.5 py-0.5 transition-all mr-4 mb-2">
+                        <span class="block bg-zinc-900 rounded-3xl py-2 px-5 transition-all text-white hover:bg-white hover:text-zinc-900">
+                            {{ title }}
+                        </span>
                     </a>
                 {{ /tags }}
             </div>
         {{ /if }}
     </div>
 
-    <h1>{{ title }}</h1>
+    <h1 class="palmiak-post-title mb-10">{{ title }}</h1>
+
+    <picture class="rounded-md block mb-10">
+        <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=600&q=80" alt="{{ title }}" class="rounded-md">
+    </picture>
 
     {{ if intro }}
         <div class="mb-10">
-            <p class="text-2xl text-white">{{ intro | nl2br }}</p>
+            <p class="text-2xl text-white font-bold">{{ intro | nl2br }}</p>
         </div>
     {{ /if }}
 

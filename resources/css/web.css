@@ -1,4 +1,6 @@
 @import './plugins/highlightjs.css';
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@400;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,27 +8,27 @@
 
 @layer components {
     h1 {
-        @apply text-5xl md:text-7xl mb-10 font-bold text-white;
+        @apply text-8xl md:text-7xl mb-10 font-bold text-white font-palmiak-font;
     }
 
     h2 {
-        @apply text-3xl mt-10 mb-4 font-bold text-white;
+        @apply text-7xl mt-10 mb-4 font-bold text-white font-palmiak-font;
     }
 
     h3 {
-        @apply text-2xl mt-8 mb-4 font-bold text-white;
+        @apply text-2xl mt-8 mb-4 font-bold text-white font-palmiak-font;
     }
 
     h4 {
-        @apply text-xl mt-8 mb-4 font-bold text-white;
+        @apply text-xl mt-8 mb-4 font-bold text-white font-palmiak-font;
     }
 
     .content {
-        @apply text-lg px-6;
+        @apply text-xl px-6;
     }
 
     .content.page {
-        @apply px-0;
+        @apply text-xl px-0;
     }
 
     .content > * {
@@ -106,3 +108,22 @@
         @apply mt-0;
     }
 }
+
+.palmiak-post-title {
+    background: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 20%, #2BFF88 50%, #2BD2FF 80%, #FA8BFF 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.palmiak-post-title:hover {
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
