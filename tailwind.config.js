@@ -8,7 +8,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                "palmiak-font": ['"Plus Jakarta Sans"', "sans-serif"],
+                "palmiak-font": ['"Montserrat"', "sans-serif"],
                 "palmiak-font-serif": ['"Martel"', "serif"],
             },
 
