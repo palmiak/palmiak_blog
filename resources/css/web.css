@@ -1,10 +1,60 @@
 @import './plugins/highlightjs.css';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Martel:wght@400;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* martel-regular - latin */
+@font-face {
+font-family: 'Martel';
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+src: local(''),
+        url('../fonts/martel-v9-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/martel-v9-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* martel-700 - latin */
+@font-face {
+font-family: 'Martel';
+font-style: normal;
+font-weight: 700;
+font-display: swap;
+src: local(''),
+        url('../fonts/martel-v9-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/martel-v9-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-regular - latin-ext_latin */
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+src: local(''),
+        url('../fonts/montserrat-v23-latin-ext_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/montserrat-v23-latin-ext_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* montserrat-700 - latin-ext_latin */
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-display: swap;
+src: local(''),
+        url('../fonts/montserrat-v23-latin-ext_latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/montserrat-v23-latin-ext_latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* montserrat-800 - latin-ext_latin */
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-display: swap;
+src: local(''),
+        url('../fonts/montserrat-v23-latin-ext_latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/montserrat-v23-latin-ext_latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
 @layer components {
     h1 {
@@ -13,6 +63,10 @@
 
     h2 {
         @apply text-4xl lg:text-7xl mt-10 mb-4 font-extrabold text-white font-palmiak-font;
+    }
+
+    article h2 {
+        @apply text-3xl lg:text-5xl mt-10 mb-4 font-extrabold text-white font-palmiak-font;
     }
 
     h3 {

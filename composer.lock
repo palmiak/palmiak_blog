@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "67f9a07d4cf15318789f4bf880d29c78",
+    "content-hash": "4693121558fb7e1ff83690857439cdca",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -1902,16 +1902,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.83.8",
+            "version": "v8.83.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "cf430301ad17656b3d918995bcdd0454c3c119b9"
+                "reference": "ac6e16bb56510eda2e373c6365d5c92da3fd559d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/cf430301ad17656b3d918995bcdd0454c3c119b9",
-                "reference": "cf430301ad17656b3d918995bcdd0454c3c119b9",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/ac6e16bb56510eda2e373c6365d5c92da3fd559d",
+                "reference": "ac6e16bb56510eda2e373c6365d5c92da3fd559d",
                 "shasum": ""
             },
             "require": {
@@ -2071,7 +2071,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-04-12T13:49:56+00:00"
+            "time": "2022-04-19T15:01:38+00:00"
         },
         {
             "name": "laravel/helpers",
@@ -4388,16 +4388,16 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v3.3.7",
+            "version": "v3.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "245000b3466e4993d53b3dab624bda5a1c865f1b"
+                "reference": "0cc66c57404fd684ea72926d86a9b590a4ee4dce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/245000b3466e4993d53b3dab624bda5a1c865f1b",
-                "reference": "245000b3466e4993d53b3dab624bda5a1c865f1b",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/0cc66c57404fd684ea72926d86a9b590a4ee4dce",
+                "reference": "0cc66c57404fd684ea72926d86a9b590a4ee4dce",
                 "shasum": ""
             },
             "require": {
@@ -4475,7 +4475,7 @@
             ],
             "support": {
                 "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v3.3.7"
+                "source": "https://github.com/statamic/cms/tree/v3.3.9"
             },
             "funding": [
                 {
@@ -4483,7 +4483,55 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-04-14T21:56:10+00:00"
+            "time": "2022-04-21T15:03:00+00:00"
+        },
+        {
+            "name": "statamic/ssg",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/statamic/ssg.git",
+                "reference": "bd2604bc7b0cc505531bfe52406af93123e51616"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/statamic/ssg/zipball/bd2604bc7b0cc505531bfe52406af93123e51616",
+                "reference": "bd2604bc7b0cc505531bfe52406af93123e51616",
+                "shasum": ""
+            },
+            "require": {
+                "statamic/cms": "~3.3.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.22.0 || ^7.0"
+            },
+            "suggest": {
+                "spatie/fork": "Required to generate pages concurrently (^0.0.4)."
+            },
+            "type": "statamic-addon",
+            "extra": {
+                "statamic": {
+                    "name": "Static Site Generator",
+                    "description": "Static Site Generator addon"
+                },
+                "laravel": {
+                    "providers": [
+                        "Statamic\\StaticSite\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Statamic\\StaticSite\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Static site generator for Statamic 3.",
+            "support": {
+                "issues": "https://github.com/statamic/ssg/issues",
+                "source": "https://github.com/statamic/ssg/tree/1.0.1"
+            },
+            "time": "2022-04-18T14:46:35+00:00"
         },
         {
             "name": "statamic/stringy",
@@ -10369,5 +10417,5 @@
         "php": "^7.4 || ^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.0.0"
 }

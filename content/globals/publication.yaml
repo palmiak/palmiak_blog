@@ -1,20 +1,14 @@
 title: Publication
 data:
-  name: aero.zeppelin
-  description: 'This is my publication. Some blog about nothing.'
+  name: 'maciek palmowski'
+  description: 'My small little blog about WordPress, CI/CD, and Technology'
   logo: aerozeppelin-logo.svg
   show_post_author: false
-  show_tags_navigation: true
+  show_tags_navigation: false
   footer_links:
     -
       name: Twitter
-      url: 'https://twitter.com/MrMooky'
+      url: 'https://twitter.com/palmiak_fp'
       icon: icons/twitter.svg
-      type: new_set
-      enabled: true
-    -
-      name: Email
-      url: 'mailto:andreas@ivymayhem.io'
-      icon: icons/mail.svg
       type: new_set
       enabled: true

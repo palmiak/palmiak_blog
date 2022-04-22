@@ -67,6 +67,21 @@ sections:
     display: Sidebar
     fields:
       -
+        handle: thumbnail
+        field:
+          mode: list
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: Thumbnail
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
         handle: slug
         field:
           type: slug
