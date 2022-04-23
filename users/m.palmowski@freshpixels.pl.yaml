@@ -10,3 +10,4 @@ preferences:
         - slug
         - date
         - thumbnail
+      after_save: continue_editing
