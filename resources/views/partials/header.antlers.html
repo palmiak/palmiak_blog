@@ -1,7 +1,7 @@
 <header class="fixed z-40 top-0 left-0 w-full bg-zinc-900/90 backdrop-blur-[10px]">
     <div class="flex items-center mx-auto max-w-6xl px-6 py-10">
         <div class="flex-1">
-            <a href="{{ link to="/" }}" class="block">
+            <a href="{{ link to="/" }}" class="block" aria-label="Return to the homepage">
                 {{ if publication:name }}
 
                 <svg viewBox="0 0 164 22" fill="none" class="max-h-10">
@@ -54,7 +54,7 @@
         </div>
 
         <div class="pl-5 relative sm:hidden" x-data="{ open : false }">
-            <button class="block cursor-pointer p-2 bg-zinc-800 rounded-lg" @click="open = true">
+            <button class="block cursor-pointer p-2 bg-zinc-800 rounded-lg" aria-label="Menu" @click="open = true">
                 {{ svg src="/assets/icons/more-vertical.svg" class="h-5 w-5" }}
             </button>
 
