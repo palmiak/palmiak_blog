@@ -12,3 +12,5 @@ data:
       icon: icons/twitter.svg
       type: new_set
       enabled: true
+  twitter_card_image: post-cover-(1).png
+  og_image: post-cover-(1).png
