@@ -3,9 +3,9 @@
         <div class="flex-1 pr-5">
             {{ if publication:show_post_author }}
                 Written by <b class="text-white">{{ author:name }}</b><br>
-                <span class="text-zinc-500 font-medium">on {{ date }}</span>
+                <span class="text-zinc-300 font-medium">on {{ date format="Y-m-d" }}</span>
             {{ else }}
-                <span class="text-zinc-500 font-medium">{{ date }}</span>
+                <span class="text-zinc-300 font-medium">{{ date format="Y-m-d" }}</span>
             {{ /if }}
         </div>
 

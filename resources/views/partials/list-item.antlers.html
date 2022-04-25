@@ -15,7 +15,7 @@
     </h2>
 
     <p>
-        <span class="text-zinc-500 font-medium">{{ date }}</span> &mdash;
+        <span class="text-zinc-300 font-medium">{{ date format="Y-m-d" }}</span> &mdash;
         {{ if excerpt }}
             {{ excerpt | strip_tags | safe_truncate:280:... }}
         {{ else }}
