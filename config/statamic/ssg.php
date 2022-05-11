@@ -61,8 +61,8 @@ return [
     */
 
     'urls' => [
-        '/feed',
-        '/feed/atom',
+        'feed/',
+        'feed/atom/',
     ],
 
     /*
