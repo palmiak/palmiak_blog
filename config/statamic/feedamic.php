@@ -107,13 +107,7 @@ return [
     |
     */
 
-    'image' => [
-        'fields' => [
-            'thumbnail',
-        ],
-        'width'  => 1280,
-        'height' => 720
-    ],
+    'image' => false,
 
 
     /*
