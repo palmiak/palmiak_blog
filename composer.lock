@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4693121558fb7e1ff83690857439cdca",
+    "content-hash": "c702acce09cd882d864d910cbe6a529d",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -2796,6 +2796,61 @@
                 "source": "https://github.com/michelf/php-smartypants/tree/1.8.1"
             },
             "time": "2016-12-13T01:01:17+00:00"
+        },
+        {
+            "name": "mitydigital/feedamic",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mitydigital/statamic-feedamic.git",
+                "reference": "319584ed83856e8baaa413ade698decada341be7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mitydigital/statamic-feedamic/zipball/319584ed83856e8baaa413ade698decada341be7",
+                "reference": "319584ed83856e8baaa413ade698decada341be7",
+                "shasum": ""
+            },
+            "require": {
+                "statamic/cms": "^3.3"
+            },
+            "type": "statamic-addon",
+            "extra": {
+                "statamic": {
+                    "name": "Feedamic",
+                    "description": "A simple RSS feed for a given collection in Statamic 3."
+                },
+                "laravel": {
+                    "providers": [
+                        "MityDigital\\Feedamic\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MityDigital\\Feedamic\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marty Friedel"
+                }
+            ],
+            "description": "A simple RSS feed generator for a given collection in Statamic 3.",
+            "keywords": [
+                "atom",
+                "rss",
+                "statamic"
+            ],
+            "support": {
+                "issues": "https://github.com/mitydigital/statamic-feedamic/issues",
+                "source": "https://github.com/mitydigital/statamic-feedamic/tree/v2.0.0"
+            },
+            "time": "2022-05-02T00:09:32+00:00"
         },
         {
             "name": "monolog/monolog",
