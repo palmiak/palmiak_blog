@@ -8,13 +8,19 @@
         "laravel"
     ],
     "type": "project",
+    "repositories":[
+        {
+            "type": "vcs",
+            "url": "https://github.com/palmiak/statamic-feedamic/"
+        }
+    ],
     "require": {
         "php": "^7.4 || ^8.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.82",
         "laravel/tinker": "^2.5",
-        "mitydigital/feedamic": "^2.0",
+        "palmiak/feedamic": "^2.0",
         "statamic/cms": "3.3.*",
         "statamic/ssg": "^1.0"
     },
