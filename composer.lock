@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e00759bafbaae95caf2f5653aab8cb7",
+    "content-hash": "585fbda0ac73878ab25ec674ad3b03c7",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -3274,21 +3274,22 @@
         },
         {
             "name": "palmiak/feedamic",
-            "version": "v2.0.0",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/palmiak/statamic-feedamic.git",
-                "reference": "319584ed83856e8baaa413ade698decada341be7"
+                "reference": "3187cdd764a189737d0e681ffbd4877c568b30e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/palmiak/statamic-feedamic/zipball/319584ed83856e8baaa413ade698decada341be7",
-                "reference": "319584ed83856e8baaa413ade698decada341be7",
+                "url": "https://api.github.com/repos/palmiak/statamic-feedamic/zipball/3187cdd764a189737d0e681ffbd4877c568b30e0",
+                "reference": "3187cdd764a189737d0e681ffbd4877c568b30e0",
                 "shasum": ""
             },
             "require": {
                 "statamic/cms": "^3.3"
             },
+            "default-branch": true,
             "type": "statamic-addon",
             "extra": {
                 "statamic": {
@@ -3314,16 +3315,16 @@
                     "name": "Marty Friedel"
                 }
             ],
-            "description": "A simple RSS feed generator for a given collection in Statamic 3.",
+            "description": "The Atom and RSS feed generator for Statamic.",
             "keywords": [
                 "atom",
                 "rss",
                 "statamic"
             ],
             "support": {
-                "source": "https://github.com/palmiak/statamic-feedamic/tree/v2.0.0"
+                "source": "https://github.com/palmiak/statamic-feedamic/tree/main"
             },
-            "time": "2022-05-02T00:09:32+00:00"
+            "time": "2022-05-11T14:28:30+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -10473,7 +10474,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "palmiak/feedamic": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
