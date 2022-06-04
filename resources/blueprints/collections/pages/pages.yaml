@@ -26,6 +26,7 @@ sections:
             - quote
             - anchor
             - image
+            - codeblock
             - horizontalrule
           save_html: false
           toolbar_mode: fixed
