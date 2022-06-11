@@ -1,5 +1,7 @@
 <div class="image {{ width }} palmiak-image">
-    {{ if width == 'wide' }}
+    {{ if image_source:extension == 'gif' }}
+        <img src="{{ image_source }}" alt="{{ image_source:alt }}" loading="lazy" class="mx-auto">
+    {{ elseif width == 'wide' }}
         <img src="{{ glide:image_source width="1110" format="webp"}}" alt="{{ image_source:alt }}" loading="lazy">
     {{ elseif width == 'narrow' }}
         <img src="{{ glide:image_source width="620" format="webp"}}" alt="{{ image_source:alt }}" loading="lazy" class="mx-auto">
