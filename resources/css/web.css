@@ -192,11 +192,11 @@ src: local(''),
     /* @apply absolute top-0 left-0 w-full h-full rounded-md block z-10 mix-blend-multiply transition-opacity duration-300 delay-300 opacity-0; */
     background: linear-gradient(49deg,#fa8bff,#2bd2ff,#2bff88);
     background-size: 180% 180%;
-    animation: gradient-animation 3s ease infinite;
 }
 
 .palmiak-image:hover:before {
     @apply opacity-100;
+    animation: gradient-animation 3s ease infinite;
 }
 
 @keyframes gradient-animation {
