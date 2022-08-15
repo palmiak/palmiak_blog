@@ -34,7 +34,7 @@
             <meta name="twitter:image" content="{{ site:permalink }}{{ glide:publication:twitter_card_image width="1200" }}">
         {{ /if }}
 
-        <link rel="stylesheet" href="{{ mix src='css/web.css' }}">
+        {{ vite src="resources/css/web.css|resources/js/site.js" }}
     </head>
     <body class="bg-zinc-900 font-palmiak-font-serif leading-normal text-zinc-300">
         {{ partial:partials/header }}
@@ -47,6 +47,5 @@
             {{ partial:partials/footer }}
         </div>
 
-        <script src="{{ mix src='/js/web.js' }}"></script>
     </body>
 </html>

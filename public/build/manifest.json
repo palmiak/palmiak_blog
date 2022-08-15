@@ -1,0 +1,52 @@
+{
+  "resources/fonts/martel-v9-latin-regular.woff2": {
+    "file": "assets/martel-v9-latin-regular.b52af4f6.woff2",
+    "src": "resources/fonts/martel-v9-latin-regular.woff2"
+  },
+  "resources/fonts/montserrat-v23-latin-ext_latin-regular.woff2": {
+    "file": "assets/montserrat-v23-latin-ext_latin-regular.9fa3920e.woff2",
+    "src": "resources/fonts/montserrat-v23-latin-ext_latin-regular.woff2"
+  },
+  "resources/fonts/martel-v9-latin-700.woff2": {
+    "file": "assets/martel-v9-latin-700.5a7f43f6.woff2",
+    "src": "resources/fonts/martel-v9-latin-700.woff2"
+  },
+  "resources/fonts/montserrat-v23-latin-ext_latin-700.woff2": {
+    "file": "assets/montserrat-v23-latin-ext_latin-700.3f181682.woff2",
+    "src": "resources/fonts/montserrat-v23-latin-ext_latin-700.woff2"
+  },
+  "resources/fonts/montserrat-v23-latin-ext_latin-800.woff2": {
+    "file": "assets/montserrat-v23-latin-ext_latin-800.8a7bb0ed.woff2",
+    "src": "resources/fonts/montserrat-v23-latin-ext_latin-800.woff2"
+  },
+  "resources/fonts/martel-v9-latin-regular.woff": {
+    "file": "assets/martel-v9-latin-regular.225113ec.woff",
+    "src": "resources/fonts/martel-v9-latin-regular.woff"
+  },
+  "resources/fonts/montserrat-v23-latin-ext_latin-regular.woff": {
+    "file": "assets/montserrat-v23-latin-ext_latin-regular.524afa51.woff",
+    "src": "resources/fonts/montserrat-v23-latin-ext_latin-regular.woff"
+  },
+  "resources/fonts/martel-v9-latin-700.woff": {
+    "file": "assets/martel-v9-latin-700.8cfd430d.woff",
+    "src": "resources/fonts/martel-v9-latin-700.woff"
+  },
+  "resources/fonts/montserrat-v23-latin-ext_latin-700.woff": {
+    "file": "assets/montserrat-v23-latin-ext_latin-700.83014dc8.woff",
+    "src": "resources/fonts/montserrat-v23-latin-ext_latin-700.woff"
+  },
+  "resources/fonts/montserrat-v23-latin-ext_latin-800.woff": {
+    "file": "assets/montserrat-v23-latin-ext_latin-800.62911b19.woff",
+    "src": "resources/fonts/montserrat-v23-latin-ext_latin-800.woff"
+  },
+  "resources/js/site.js": {
+    "file": "assets/site.5f3ad8a7.js",
+    "src": "resources/js/site.js",
+    "isEntry": true
+  },
+  "resources/css/web.css": {
+    "file": "assets/web.b4737025.css",
+    "src": "resources/css/web.css",
+    "isEntry": true
+  }
+}
