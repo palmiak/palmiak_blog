@@ -5,7 +5,7 @@ export default defineConfig({
     plugins: [
         laravel([
             'resources/css/web.css',
-            'resources/js/site.js',
+            'resources/js/web.js',
         ]),
     ],
 });
