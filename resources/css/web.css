@@ -6,83 +6,56 @@
 
 /* martel-regular - latin */
 @font-face {
-font-family: 'Martel';
-font-style: normal;
-font-weight: 400;
-font-display: swap;
-src: local(''),
-        url('../fonts/martel-v9-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/martel-v9-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* martel-700 - latin */
-@font-face {
-font-family: 'Martel';
-font-style: normal;
-font-weight: 700;
-font-display: swap;
-src: local(''),
-        url('../fonts/martel-v9-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/martel-v9-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-family: 'JetBrainsMono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/JetBrainsMono-Regular.woff2') format('woff2');
 }
 
-/* montserrat-regular - latin-ext_latin */
 @font-face {
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 400;
-font-display: swap;
-src: local(''),
-        url('../fonts/montserrat-v23-latin-ext_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/montserrat-v23-latin-ext_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-family: 'JetBrainsMono';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/JetBrainsMono-Bold.woff2') format('woff2');
 }
-/* montserrat-700 - latin-ext_latin */
+
 @font-face {
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-display: swap;
-src: local(''),
-        url('../fonts/montserrat-v23-latin-ext_latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/montserrat-v23-latin-ext_latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* montserrat-800 - latin-ext_latin */
-@font-face {
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 800;
-font-display: swap;
-src: local(''),
-        url('../fonts/montserrat-v23-latin-ext_latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/montserrat-v23-latin-ext_latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-family: 'JetBrainsMono';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('../fonts/JetBrainsMono-ExtraBold.woff2') format('woff2');
 }
 
 @layer components {
     h1 {
-        @apply text-5xl md:text-7xl mb-10 font-extrabold text-white font-palmiak-font;
+        @apply text-5xl md:text-5xl mb-10 font-bold text-white font-palmiak-font;
     }
 
     h2 {
-        @apply text-4xl lg:text-7xl mt-10 mb-4 font-extrabold text-white font-palmiak-font;
+        @apply text-4xl lg:text-4xl mt-10 mb-4 font-bold text-white font-palmiak-font;
     }
 
     article h2 {
-        @apply text-3xl lg:text-5xl mt-10 mb-4 font-extrabold text-white font-palmiak-font;
+        @apply text-3xl lg:text-4xl mt-10 mb-4 font-bold text-palmiak_pink font-palmiak-font;
     }
 
     h3 {
-        @apply text-2xl mt-8 mb-4 font-extrabold text-white font-palmiak-font;
+        @apply text-2xl mt-8 mb-4 font-bold text-white font-palmiak-font;
     }
 
     h4 {
-        @apply text-xl mt-8 mb-4 font-extrabold text-white font-palmiak-font;
+        @apply text-xl mt-8 mb-4 font-bold text-white font-palmiak-font;
     }
 
     .content {
-        @apply text-xl px-6;
+        @apply text-lg px-6;
     }
 
     .content.page {
-        @apply text-xl px-0;
+        @apply text-lg px-0;
     }
 
     .content > * {
@@ -155,7 +128,7 @@ src: local(''),
     }
 
     .content pre code {
-        @apply block text-sm text-white bg-zinc-800 p-0 rounded-none font-mono whitespace-pre;
+        @apply block text-sm text-white bg-zinc-800 p-0 rounded-none whitespace-pre;
     }
 
     .content p ~ pre {

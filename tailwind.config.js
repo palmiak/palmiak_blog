@@ -8,8 +8,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                "palmiak-font": ['"Montserrat"', "sans-serif"],
-                "palmiak-font-serif": ['"Martel"', "serif"],
+                "palmiak-font": ['"JetBrainsMono"', "serif"],
+                "palmiak-font-serif": ['"JetBrainsMono"', "serif"],
             },
 
             colors: {
