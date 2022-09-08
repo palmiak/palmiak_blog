@@ -40,6 +40,7 @@
 
     article h2 {
         @apply text-3xl lg:text-4xl mt-10 mb-4 font-bold text-palmiak_pink font-palmiak-font;
+
     }
 
     h3 {
@@ -100,7 +101,7 @@
     }
 
     .content p a {
-        @apply underline text-emerald-300 hover:text-emerald-50 transition-colors;
+        @apply underline text-palmiak_blue hover:text-palmiak_pink transition-colors;
     }
 
     .content ul {
@@ -137,7 +138,7 @@
 }
 
 .palmiak-post-title {
-    background: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 20%, #2BFF88 50%, #2BD2FF 80%, #FA8BFF 100%);
+    background: linear-gradient(45deg, #F027A6 0%, #16E6F3 20%, #A05FE0 50%, #16E6F3 80%, #F027A6 100%);
     background-size: 200% auto;
     background-clip: text;
     text-fill-color: transparent;
@@ -163,7 +164,7 @@
     content: "";
     @apply absolute top-5 left-5 blur-3xl w-full h-full rounded-md block -z-10 transition-opacity duration-500 opacity-0;
     /* @apply absolute top-0 left-0 w-full h-full rounded-md block z-10 mix-blend-multiply transition-opacity duration-300 delay-300 opacity-0; */
-    background: linear-gradient(49deg,#fa8bff,#2bd2ff,#2bff88);
+    background: linear-gradient(49deg,#F027A6, #16E6F3, #A05FE0);
     background-size: 180% 180%;
 }
 

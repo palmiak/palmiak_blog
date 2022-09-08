@@ -13,9 +13,10 @@ module.exports = {
             },
 
             colors: {
-                palmiak_pink: "#FA8BFF",
-                palmiak_blue: "#2BD2FF",
-                palmiak_green: "#2BFF88",
+                "palmiak_pink": "#F027A6",
+                "palmiak_blue": "#16E6F3",
+                "palmiak_green": "#A05FE0",
+                "palmiak_bg": "#2b213a"
             },
         },
     },
