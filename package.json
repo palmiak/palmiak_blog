@@ -4,7 +4,7 @@
     "scripts": {
         "dev": "vite",
         "development": "vite",
-        "build": "vite build",
+        "build": "vite build --https",
         "watch": "vite build --watch",
         "watch-poll": "vite build --watch",
         "hot": "mix watch --hot",
