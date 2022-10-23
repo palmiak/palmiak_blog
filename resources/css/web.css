@@ -168,6 +168,10 @@
     background-size: 180% 180%;
 }
 
+#revue-embed {
+    background: linear-gradient(49deg,#F027A6, #16E6F3, #A05FE0);
+}
+
 .palmiak-image:hover:before {
     @apply opacity-100;
     animation: gradient-animation 3s ease infinite;
