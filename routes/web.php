@@ -16,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 // Route::statamic('example', 'example-view', [
 //    'title' => 'Example'
 // ]);
-//URL::forceScheme('https');
+URL::forceScheme('https');
