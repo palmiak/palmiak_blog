@@ -1,4 +1,8 @@
 {
+  "resources/fonts/JetBrainsMono-Regular.woff2": {
+    "file": "assets/JetBrainsMono-Regular.bceff071.woff2",
+    "src": "resources/fonts/JetBrainsMono-Regular.woff2"
+  },
   "resources/fonts/JetBrainsMono-ExtraBold.woff2": {
     "file": "assets/JetBrainsMono-ExtraBold.28507c9c.woff2",
     "src": "resources/fonts/JetBrainsMono-ExtraBold.woff2"
@@ -7,17 +11,13 @@
     "file": "assets/JetBrainsMono-Bold.df3f86c0.woff2",
     "src": "resources/fonts/JetBrainsMono-Bold.woff2"
   },
-  "resources/fonts/JetBrainsMono-Regular.woff2": {
-    "file": "assets/JetBrainsMono-Regular.bceff071.woff2",
-    "src": "resources/fonts/JetBrainsMono-Regular.woff2"
-  },
   "resources/js/web.js": {
-    "file": "assets/web.e01a2a79.js",
+    "file": "assets/web.b4ced189.js",
     "src": "resources/js/web.js",
     "isEntry": true
   },
   "resources/css/web.css": {
-    "file": "assets/web.af375757.css",
+    "file": "assets/web.8b646a95.css",
     "src": "resources/css/web.css",
     "isEntry": true
   }
