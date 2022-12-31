@@ -19,7 +19,6 @@ sections:
           instructions: 'This intro is shown just below the headline with a slightly more prominent appearance than the body text.'
           listable: hidden
           instructions_position: above
-          read_only: false
       -
         handle: content
         field:
@@ -55,7 +54,6 @@ sections:
           icon: bard
           listable: hidden
           instructions_position: above
-          read_only: false
           container: assets
           sets:
             image:
@@ -76,7 +74,16 @@ sections:
                     icon: text
                     listable: hidden
                     instructions_position: above
-                    read_only: false
+            alert:
+              display: Alert
+              fields:
+                -
+                  import: alert
+          visibility: visible
+          always_save: false
+          collapse: false
+          previews: true
+          remove_empty_nodes: false
   sidebar:
     display: Sidebar
     fields:
@@ -94,7 +101,6 @@ sections:
           icon: assets
           listable: hidden
           instructions_position: above
-          read_only: false
       -
         handle: slug
         field:
@@ -116,7 +122,6 @@ sections:
           icon: users
           listable: hidden
           instructions_position: above
-          read_only: false
           max_items: 1
       -
         handle: excerpt
@@ -128,7 +133,6 @@ sections:
           instructions: 'If empty, the first 280 characters of your article content will be used for the list view.'
           listable: hidden
           instructions_position: above
-          read_only: false
       -
         handle: tags
         field:
@@ -154,7 +158,6 @@ sections:
           icon: assets
           listable: hidden
           instructions_position: above
-          read_only: false
       -
         handle: og_image
         field:
@@ -169,5 +172,4 @@ sections:
           icon: assets
           listable: hidden
           instructions_position: above
-          read_only: false
 title: Posts
