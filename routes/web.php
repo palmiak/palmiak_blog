@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::statamic('page/{page}', 'home');
 // Route::statamic('example', 'example-view', [
 //    'title' => 'Example'
 // ]);
