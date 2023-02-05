@@ -1,0 +1,16 @@
+<div class="content page">
+    <img srcset="{{ glide :src="photo" w="320" h="320" format="webp" }}" class="rounded-full"/>
+    {{ bio }}
+    <div class="flex flex-wrap flex-col lg:flex-row">
+    {{ links }}
+        <a href="{{ url }}" target="about:blank" class="flex grow">
+        <button type="button"
+            class="font-medium rounded-lg text-sm px-5 py-2.5 text-center flex grow items-center focus:ring-gray-600 bg-gray-800 text-white hover:bg-gray-700 mr-2 mb-2 border-2 border-palmiak_green">
+
+            {{ svg :src="type" class="fill-current w-6 h-6 mr-2 -ml-1" }}
+            {{ label }}
+        </button>
+        </a>
+    {{ /links }}
+    </div>
+</div>
