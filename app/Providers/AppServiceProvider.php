@@ -62,7 +62,7 @@ class AppServiceProvider extends ServiceProvider
         $url = '/';
 
         // The number of entries per page, according to your collection tag.
-        $perPage = 12;
+        $perPage = 10;
 
         // The total number of entries in the collection.
         // Make sure to mimic whatever params/filters are on the collection tag.
