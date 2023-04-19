@@ -11,3 +11,19 @@ preferences:
         - date
         - thumbnail
       after_save: continue_editing
+      filters:
+        published:
+          display: Published
+          filters:
+            status:
+              status: published
+        drafts:
+          display: Drafts
+          filters:
+            status:
+              status: draft
+    pages:
+      columns:
+        - title
+        - status
+        - slug

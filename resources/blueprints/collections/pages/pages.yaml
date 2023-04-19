@@ -1,61 +1,82 @@
 title: Pages
-sections:
+tabs:
   main:
     display: Main
-    fields:
+    sections:
       -
-        handle: title
-        field:
-          type: text
-          required: true
-          validate:
-            - required
-      -
-        handle: content
-        field:
-          always_show_set_button: false
-          buttons:
-            - h2
-            - h3
-            - h4
-            - bold
-            - italic
-            - unorderedlist
-            - orderedlist
-            - removeformat
-            - quote
-            - anchor
-            - image
-            - codeblock
-            - horizontalrule
-          save_html: false
-          toolbar_mode: fixed
-          link_noopener: false
-          link_noreferrer: false
-          target_blank: false
-          reading_time: false
-          fullscreen: true
-          allow_source: true
-          enable_input_rules: true
-          enable_paste_rules: true
-          antlers: false
-          display: Content
-          type: bard
-          icon: bard
-          listable: hidden
-          instructions_position: above
-          read_only: false
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              always_show_set_button: false
+              buttons:
+                - h2
+                - h3
+                - h4
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - codeblock
+                - horizontalrule
+              save_html: false
+              toolbar_mode: fixed
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              reading_time: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              antlers: false
+              display: Content
+              type: bard
+              icon: bard
+              listable: hidden
+              instructions_position: above
   sidebar:
     display: Sidebar
-    fields:
+    sections:
       -
-        handle: slug
-        field:
-          type: slug
-          localizable: true
-      -
-        handle: template
-        field:
-          type: template
-          display: Template
-          localizable: true
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+          -
+            handle: width_field
+            field:
+              options:
+                - 25
+                - 33
+                - 50
+                - 66
+                - 75
+                - 100
+              default: 100
+              display: 'Width Field'
+              type: width
+              icon: width
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
