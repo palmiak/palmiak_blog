@@ -28,8 +28,8 @@
         <meta name="twitter:creator" content="@palmiak_fp">
         <meta name="twitter:title" content="{{ title ?? site:name }} | {{ publication:name }}">
         <meta name="twitter:description" content="{{ excerpt | strip_tags | safe_truncate:155:... ?? publication:description | strip_tags | safe_truncate:155:... }}">
-        {{ if twitter_card_image }}
-            <meta name="twitter:image" content="{{ site:permalink }}{{ glide:twitter_card_image width="1200" }}">
+        {{ if og_image }}
+            <meta name="twitter:image" content="{{ site:permalink }}{{ glide:og_image width="1200" }}">
         {{ elseif publication:twitter_card_image }}
             <meta name="twitter:image" content="{{ site:permalink }}{{ glide:publication:twitter_card_image width="1200" }}">
         {{ /if }}

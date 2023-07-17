@@ -40,15 +40,15 @@ sections:
             - horizontalrule
           save_html: false
           toolbar_mode: fixed
-          link_noopener: false
-          link_noreferrer: false
-          target_blank: false
+          link_noopener: true
+          link_noreferrer: true
+          target_blank: true
           reading_time: false
           fullscreen: true
           allow_source: true
           enable_input_rules: true
           enable_paste_rules: true
-          antlers: false
+          antlers: true
           display: Content
           type: bard
           icon: bard
@@ -84,6 +84,8 @@ sections:
           collapse: false
           previews: true
           remove_empty_nodes: false
+          smart_typography: false
+          inline: false
   sidebar:
     display: Sidebar
     fields:

@@ -5,6 +5,12 @@
 
     {{ posts }}
         {{ partial:partials/list-item }}
+
+        {{ if index == 1 }}
+        <div class="mb-16 content page">
+            {{ partial:partials/newsletter }}
+        </div>
+        {{ /if }}
     {{ /posts }}
 
     {{ paginate }}
