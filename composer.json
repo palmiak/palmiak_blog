@@ -21,8 +21,8 @@
         "laravel/framework": "^9.0",
         "laravel/tinker": "^2.5",
         "palmiak/feedamic": "dev-main",
-        "statamic/cms": "^3",
-        "statamic/ssg": "^1.0"
+        "statamic/cms": "^4",
+        "statamic/ssg": "^2"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",

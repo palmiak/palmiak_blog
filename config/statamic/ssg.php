@@ -14,7 +14,7 @@ return [
     */
 
     'base_url' => config('app.url'),
-
+    'pagination_route' => '{url}/{page_name}/{page_number}',
     /*
     |--------------------------------------------------------------------------
     | Destination Directory

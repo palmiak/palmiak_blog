@@ -19,9 +19,7 @@
                 <ul class="inline-flex items-center justify-center">
                     {{ if prev_page }}
                         <li class="mx-2">
-                            <a href="{{ better_pagination:prev
-                                :page="current_page"
-                            }}" class="block px-3 py-2 border border-zinc-800 rounded-lg hover:text-white hover:border-zinc-700 transition-colors">
+                            <a href="{{ prev_page }}" class="block px-3 py-2 border border-zinc-800 rounded-lg hover:text-white hover:border-zinc-700 transition-colors">
                                 {{ svg src="/assets/icons/arrow-left.svg" class="h-5 w-5" }}
                             </a>
                         </li>
@@ -39,9 +37,7 @@
 
                     {{ if next_page }}
                         <li class="mx-2">
-                            <a href="{{ better_pagination:next
-                                :page="current_page"
-                            }}" class="block px-3 py-2 border border-zinc-800 rounded-lg hover:text-white hover:border-zinc-700 transition-colors">
+                            <a href="{{ next_page }}" class="block px-3 py-2 border border-zinc-800 rounded-lg hover:text-white hover:border-zinc-700 transition-colors">
                                 {{ svg src="/assets/icons/arrow-right.svg" class="h-5 w-5" }}
                             </a>
                         </li>

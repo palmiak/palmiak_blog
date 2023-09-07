@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\UrlPaginator;
 use Illuminate\Support\ServiceProvider;
 use Statamic\Extensions\Pagination\LengthAwarePaginator;
 use Statamic\Facades\Entry;
@@ -18,43 +17,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
 
-        $this->bootSsg();
 
     }
 
-    private function bootSsg()
-    {
-        $this->app->extend(LengthAwarePaginator::class, function ($paginator) {
-            $options = $paginator->getOptions();
-            $options['path'] = preg_replace('/\/page\/\d+$/', '', $options['path']);
-
-            return $this->app->makeWith(UrlPaginator::class, [
-                'items' => $paginator->getCollection(),
-                'total' => $paginator->total(),
-                'perPage' => $paginator->perPage(),
-                'currentPage' => $paginator->currentPage(),
-                'options' => $options,
-            ]);
-        });
-
-        UrlPaginator::currentPageResolver(function () {
-            return optional($this->app['request']->route())->parameter('page');
-        });
-
-        $this->app->beforeResolving(Generator::class, function ($generator) {
-            $config = config('statamic.ssg');
-
-            $config['urls'] = array_merge(
-                $config['urls'],
-                $this->articleUrls(),
-                // $this->blogUrls(),
-                // $this->tagUrls(),
-                // etc
-            );
-
-            config(['statamic.ssg' => $config]);
-        });
-    }
 
     private function articleUrls()
     {
