@@ -22,7 +22,7 @@
         "laravel/tinker": "^2.5",
         "palmiak/feedamic": "dev-main",
         "statamic/cms": "^4",
-        "statamic/ssg": "^2"
+        "statamic/ssg": "^2.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",

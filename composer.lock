@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "21911208f4707021030641a633e3d95b",
+    "content-hash": "bf1784705fba0c0bcf3e1a92f2d26a16",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -3358,16 +3358,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.69.0",
+            "version": "2.70.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "4308217830e4ca445583a37d1bf4aff4153fa81c"
+                "reference": "d3298b38ea8612e5f77d38d1a99438e42f70341d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/4308217830e4ca445583a37d1bf4aff4153fa81c",
-                "reference": "4308217830e4ca445583a37d1bf4aff4153fa81c",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/d3298b38ea8612e5f77d38d1a99438e42f70341d",
+                "reference": "d3298b38ea8612e5f77d38d1a99438e42f70341d",
                 "shasum": ""
             },
             "require": {
@@ -3460,7 +3460,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-08-03T09:00:52+00:00"
+            "time": "2023-09-07T16:43:50+00:00"
         },
         {
             "name": "nette/schema",
@@ -3759,16 +3759,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/palmiak/statamic-feedamic.git",
-                "reference": "f82ef37e6a509a1c5db1e5ec2f9255a006d3363a"
+                "reference": "aaffb93c95ab12fdadce2b86eb3f96b694d79c45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/palmiak/statamic-feedamic/zipball/f82ef37e6a509a1c5db1e5ec2f9255a006d3363a",
-                "reference": "f82ef37e6a509a1c5db1e5ec2f9255a006d3363a",
+                "url": "https://api.github.com/repos/palmiak/statamic-feedamic/zipball/aaffb93c95ab12fdadce2b86eb3f96b694d79c45",
+                "reference": "aaffb93c95ab12fdadce2b86eb3f96b694d79c45",
                 "shasum": ""
             },
             "require": {
-                "statamic/cms": "^3.3 || ^4"
+                "php": "^8.0",
+                "statamic/cms": "^3.3|^4.0"
             },
             "default-branch": true,
             "type": "statamic-addon",
@@ -3805,7 +3806,7 @@
             "support": {
                 "source": "https://github.com/palmiak/statamic-feedamic/tree/main"
             },
-            "time": "2023-09-07T08:27:22+00:00"
+            "time": "2023-09-07T17:13:01+00:00"
         },
         {
             "name": "phpoption/phpoption",
