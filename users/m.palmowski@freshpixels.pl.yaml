@@ -27,3 +27,6 @@ preferences:
         - title
         - status
         - slug
+  assets:
+    assets:
+      mode: grid
