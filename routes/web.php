@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 // Route::statamic('example', 'example-view', [
 //    'title' => 'Example'
 // ]);
+Route::get('/wp-admin', function () {
+    return redirect('/cp');
+});
+Route::get('/admin', function () {
+    return redirect('/cp');
+});
