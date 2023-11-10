@@ -8,7 +8,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                "palmiak-font": ['"JetBrainsMono"', "serif"],
+                "palmiak-font": ['"Montserrat"', "serif"],
+                "palmiak-font-title": ['"Unbounded"', "serif"],
                 "palmiak-font-serif": ['"JetBrainsMono"', "serif"],
             },
 
@@ -16,7 +17,9 @@ module.exports = {
                 "palmiak_pink": "#F027A6",
                 "palmiak_blue": "#16E6F3",
                 "palmiak_green": "#A05FE0",
-                "palmiak_bg": "#2b213a"
+                "palmiak_bg": "#100F15",
+                "palmiak_lightdark": "#231F52",
+                "palmiak_deepdark": "0F0E14"
             },
         },
     },

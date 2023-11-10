@@ -1,53 +1,161 @@
 <!doctype html>
 <html lang="{{ site:short_locale }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/fav/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/fav/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/fav/favicon-16x16.png">
-        <link rel="manifest" href="/assets/fav/site.webmanifest">
-        <link rel="mask-icon" href="/assets/fav/safari-pinned-tab.svg" color="#18181b">
-        <meta name="msapplication-TileColor" content="#18181b">
-        <meta name="theme-color" content="#18181b">
-        {{ feedamic }}
 
-        <title>{{ title ?? site:name }} | {{ publication:name }}</title>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/fav/favicon-16x16.png">
+    <link rel="manifest" href="/assets/fav/site.webmanifest">
+    <link rel="mask-icon" href="/assets/fav/safari-pinned-tab.svg" color="#18181b">
+    <meta name="msapplication-TileColor" content="#18181b">
+    <meta name="theme-color" content="#18181b">
+    {{ feedamic }}
 
-        <meta name="description" content="{{ excerpt | strip_tags | safe_truncate:155:... ?? publication:description | strip_tags | safe_truncate:155:... }}" />
-        <meta property="og:title" content="{{ title ?? site:name }} | {{ publication:name }}" />
-        <meta property="og:description" content="{{ excerpt | strip_tags | safe_truncate:155:... ?? publication:description | strip_tags | safe_truncate:155:... }}" />
-        {{ if og_image }}
-            <meta property="og:image" content="{{ site:permalink }}{{ glide:og_image width="1200" }}">
-        {{ elseif publication:og_image }}
-            <meta property="og:image" content="{{ site:permalink }}{{ glide:publication:og_image width="1200" }}">
-        {{ /if }}
+    <title>{{ title ?? site:name }} | {{ publication:name }}</title>
 
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:creator" content="@palmiak_fp">
-        <meta name="twitter:title" content="{{ title ?? site:name }} | {{ publication:name }}">
-        <meta name="twitter:description" content="{{ excerpt | strip_tags | safe_truncate:155:... ?? publication:description | strip_tags | safe_truncate:155:... }}">
-        {{ if og_image }}
-            <meta name="twitter:image" content="{{ site:permalink }}{{ glide:og_image width="1200" }}">
-        {{ elseif publication:twitter_card_image }}
-            <meta name="twitter:image" content="{{ site:permalink }}{{ glide:publication:twitter_card_image width="1200" }}">
-        {{ /if }}
+    <meta name="description"
+        content="{{ excerpt | strip_tags | safe_truncate:155:... ?? publication:description | strip_tags | safe_truncate:155:... }}" />
+    <meta property="og:title" content="{{ title ?? site:name }} | {{ publication:name }}" />
+    <meta property="og:description"
+        content="{{ excerpt | strip_tags | safe_truncate:155:... ?? publication:description | strip_tags | safe_truncate:155:... }}" />
+    {{ if og_image }}
+    <meta property="og:image" content="{{ site:permalink }}{{ glide:og_image width=" 1200" }}">
+    {{ elseif publication:og_image }}
+    <meta property="og:image" content="{{ site:permalink }}{{ glide:publication:og_image width=" 1200" }}">
+    {{ /if }}
 
-        {{ vite src="resources/css/web.css|resources/js/web.js" }}
-        <script data-goatcounter="https://palmiak.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-    </head>
-    <body class="bg-palmiak_bg font-palmiak-font-serif leading-normal text-zinc-300">
-        {{ partial:partials/header }}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@palmiak_fp">
+    <meta name="twitter:title" content="{{ title ?? site:name }} | {{ publication:name }}">
+    <meta name="twitter:description"
+        content="{{ excerpt | strip_tags | safe_truncate:155:... ?? publication:description | strip_tags | safe_truncate:155:... }}">
+    {{ if og_image }}
+    <meta name="twitter:image" content="{{ site:permalink }}{{ glide:og_image width=" 1200" }}">
+    {{ elseif publication:twitter_card_image }}
+    <meta name="twitter:image" content="{{ site:permalink }}{{ glide:publication:twitter_card_image width=" 1200" }}">
+    {{ /if }}
 
-        <div class="flex flex-col min-h-screen">
-            <div class="flex-1 pb-10 w-full mx-auto {{ current_template == 'posts/show' ? 'max-w-6xl' : 'max-w-3xl px-6' }} pt-20">
-                {{ template_content }}
+    {{ vite src="resources/css/web.css|resources/js/web.js" }}
+    <script data-goatcounter="https://palmiak.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+
+<body class="bg-palmiak_bg font-palmiak-font leading-normal text-zinc-300 grid grid-cols-1 gap-10 pt-[180px]">
+    {{ partial:partials/header }}
+
+    <section class="container mx-auto px-5 max-[660px]:px-0">
+        <div
+            class="min-h-[670px] min-[1024px]:pl-[550px] max-[1023px]:pb-[470px] max-[660px]:rounded-none max-[1023px]:bg-[length:auto_600px] rounded-2xl grid items-center bg-[url('/resources/images/heroop.png')] bg-palmiak_bg bg-left-bottom bg-no-repeat p-10 hero-shadow">
+            <div class="self-stretch flex-col justify-center items-start gap-7 flex max-w-[700px]">
+                <h1 class="text-3xl md:text-6xl font-bold font-palmiak-font-title m-0">Maciek Palmowski</h1>
+                <hr class="gradient-line" />
+                <div class="prose lg:prose-xl">
+                    <p>Turpis diam cras massa congue amet. Mauris <a href="">congue quis orci nunc</a> luctus cursus
+                        eget. Iaculis aliquam ipsum tempus neque aliquet elit maecenas. Diam nec consectetur gravida sed
+                        lorem. Commodo pellentesque vulputate amet lacus nisl egestas rutrum in duis. Neque fames enim
+                        eget id mi mi pulvinar feugiat. Ac non leo id turpis.</p>
+                </div>
+                <div class="justify-start items-center gap-5 inline-flex max-[660px]:flex max-[660px]:flex-col w-full max-[660px]:items-start">
+                    <a href=""
+                        class="h-[62px] flex rounded-full bg-gradient-to-r from-palmiak_pink via-palmiak_green to-palmiak_blue p-[1px]">
+                        <div class="text-white text-base font-bold font-palmiak-font-title tracking-wide flex rounded-full h-full items-center justify-center bg-palmiak_bg back px-5 transition-all duration-150 hover:bg-opacity-80 text-[15px]">more about me</div>
+                    </a>
+
+                    <div class="justify-start items-center gap-5 inline-flex">
+                        <a href="" class="rounded-full w-[62px] h-[62px] bg-palmiak_pink flex relative transition-all duration-150 hover:bg-palmiak_lightdark hover:bg-opacity-40">
+                            {{ svg src="linkedin" class="absolute inset-1/2 -translate-y-1/2 -translate-x-1/2" }}
+                        </a>
+    
+                        <a href="" class="rounded-full w-[62px] h-[62px] bg-palmiak_green flex relative transition-all duration-150 hover:bg-palmiak_lightdark hover:bg-opacity-40">
+                            {{ svg src="iks" class="absolute inset-1/2 -translate-y-1/2 -translate-x-1/2" }}
+                        </a>
+    
+                        <a href="" class="rounded-full w-[62px] h-[62px] bg-palmiak_blue flex relative transition-all duration-150 hover:bg-palmiak_lightdark hover:bg-opacity-40">
+                            {{ svg src="insta" class="absolute inset-1/2 -translate-y-1/2 -translate-x-1/2" }}  
+                        </a>
+                    </div>
+                </div>
             </div>
-
-            {{ partial:partials/footer }}
         </div>
+    </section>
 
-    </body>
+    <h3 class="container mx-auto px-5 text-center text-white text-xl font-bold font-palmiak-font-title m-0 mt-10">
+        Featured posts</h3>
+    <hr class="gradient-line mx-auto" />
+
+    <div class="container mx-auto max-w-[1400px] px-5 grid grid-cols-1 min-[1024px]:grid-cols-2 gap-7">
+        {{ partial:partials/blogitem }}
+        {{ partial:partials/blogitem }}
+    </div>
+
+    {{ partial:partials/newsletterbox }}
+
+    <h3 class="container mx-auto px-5 text-center text-white text-xl font-bold font-palmiak-font-title m-0 mt-10">
+        Popular blog topics</h3>
+    <hr class="gradient-line mx-auto" />
+
+    <div class="container mx-auto max-w-[1400px] px-5 justify-center items-start gap-7 flex flex-wrap">
+        {{ partial:partials/populartopic }}
+        {{ partial:partials/populartopic }}
+        {{ partial:partials/populartopic }}
+        {{ partial:partials/populartopic }}
+        {{ partial:partials/populartopic }}
+        {{ partial:partials/populartopic }}
+        {{ partial:partials/populartopic }}
+    </div>
+
+    <div class="container mx-auto max-w-[1400px] px-5 grid grid-cols-1 min-[1024px]:grid-cols-2 gap-7 mt-10">
+        {{ partial:partials/blogitem }}
+        {{ partial:partials/blogitem }}
+        {{ partial:partials/blogitem }}
+        {{ partial:partials/blogitem }}
+        {{ partial:partials/blogitem }}
+        {{ partial:partials/blogitem }}
+        {{ partial:partials/blogitem }}
+        {{ partial:partials/blogitem }}
+    </div>
+
+    <section class="container mx-auto px-5 max-[660px]:px-0 mt-10">
+        <div
+            class="min-h-[670px] min-[1024px]:pr-[550px] max-[1023px]:pb-[470px] max-[660px]:rounded-none max-[1023px]:bg-[length:auto_600px] rounded-2xl grid items-center bg-[url('/resources/images/ccshero.png')] bg-palmiak_bg bg-right-bottom bg-no-repeat p-10 hero-shadow">
+            <div class="self-stretch flex-col justify-center items-start gap-7 flex max-w-[700px]">
+                <h1 class="text-3xl md:text-6xl font-bold font-palmiak-font-title m-0">Code & Coffee Show</h1>
+                <hr class="gradient-line" />
+                <div class="prose lg:prose-xl">
+                    <p>Turpis diam cras massa congue amet. Mauris <a href="">congue quis orci nunc</a> luctus cursus
+                        eget. Iaculis aliquam ipsum tempus neque aliquet elit maecenas. Diam nec consectetur gravida sed
+                        lorem. Commodo pellentesque vulputate amet lacus nisl egestas rutrum in duis. Neque fames enim
+                        eget id mi mi pulvinar feugiat. Ac non leo id turpis.</p>
+                </div>
+                <div class="justify-start items-center gap-5 inline-flex max-[660px]:flex max-[660px]:flex-col w-full max-[660px]:items-start">
+                    <a href=""
+                        class="h-[62px] flex rounded-full bg-gradient-to-r from-palmiak_pink via-palmiak_green to-palmiak_blue p-[1px]">
+                        <div class="text-white text-base font-bold font-palmiak-font-title tracking-wide flex rounded-full h-full items-center justify-center bg-palmiak_bg back px-5 transition-all duration-150 hover:bg-opacity-80 text-[15px]">subscribe now!</div>
+                    </a>
+
+                    <div class="justify-start items-center gap-5 inline-flex">
+                        <a href="" class="rounded-full w-[62px] h-[62px] bg-palmiak_pink flex relative transition-all duration-150 hover:bg-palmiak_lightdark hover:bg-opacity-40">
+                            {{ svg src="youtube" class="absolute inset-1/2 -translate-y-1/2 -translate-x-1/2" }}
+                        </a>
+    
+                        <a href="" class="rounded-full w-[62px] h-[62px] bg-palmiak_green flex relative transition-all duration-150 hover:bg-palmiak_lightdark hover:bg-opacity-40">
+                            {{ svg src="iks" class="absolute inset-1/2 -translate-y-1/2 -translate-x-1/2" }}
+                        </a>
+    
+                        <a href="" class="rounded-full w-[62px] h-[62px] bg-palmiak_blue flex relative transition-all duration-150 hover:bg-palmiak_lightdark hover:bg-opacity-40">
+                            {{ svg src="twitch" class="absolute inset-1/2 -translate-y-1/2 -translate-x-1/2" }}  
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{ partial:partials/footer }}
+
+    {{ partial:partials/circlebg }}
+</body>
+
 </html>
