@@ -1,8 +1,4 @@
 {
-  "resources/fonts/unbounded-v7-latin-regular.woff2": {
-    "file": "assets/unbounded-v7-latin-regular.9ad59444.woff2",
-    "src": "resources/fonts/unbounded-v7-latin-regular.woff2"
-  },
   "resources/fonts/montserrat-v26-latin-regular.woff2": {
     "file": "assets/montserrat-v26-latin-regular.4b5816bb.woff2",
     "src": "resources/fonts/montserrat-v26-latin-regular.woff2"
@@ -11,17 +7,17 @@
     "file": "assets/unbounded-v7-latin-700.d1df3113.woff2",
     "src": "resources/fonts/unbounded-v7-latin-700.woff2"
   },
-  "resources/fonts/montserrat-v26-latin-700.woff2": {
-    "file": "assets/montserrat-v26-latin-700.a60b1ba9.woff2",
-    "src": "resources/fonts/montserrat-v26-latin-700.woff2"
+  "resources/fonts/unbounded-v7-latin-regular.woff2": {
+    "file": "assets/unbounded-v7-latin-regular.9ad59444.woff2",
+    "src": "resources/fonts/unbounded-v7-latin-regular.woff2"
   },
   "resources/fonts/montserrat-v26-latin-italic.woff2": {
     "file": "assets/montserrat-v26-latin-italic.da22288b.woff2",
     "src": "resources/fonts/montserrat-v26-latin-italic.woff2"
   },
-  "resources/images/heroop.png": {
-    "file": "assets/heroop.5c451e88.png",
-    "src": "resources/images/heroop.png"
+  "resources/fonts/montserrat-v26-latin-700.woff2": {
+    "file": "assets/montserrat-v26-latin-700.a60b1ba9.woff2",
+    "src": "resources/fonts/montserrat-v26-latin-700.woff2"
   },
   "resources/js/web.js": {
     "file": "assets/web.69314604.js",
@@ -29,12 +25,8 @@
     "isEntry": true
   },
   "resources/css/web.css": {
-    "file": "assets/web.8c566330.css",
+    "file": "assets/web.e5f924e3.css",
     "src": "resources/css/web.css",
     "isEntry": true
-  },
-  "resources/images/ccshero.png": {
-    "file": "assets/ccshero.1a4eeff9.png",
-    "src": "resources/images/ccshero.png"
   }
 }

@@ -166,13 +166,14 @@
     background: linear-gradient(45deg, #F027A6 0%, #16E6F3 20%, #A05FE0 50%, #16E6F3 80%, #F027A6 100%);
     background-size: 200% auto;
     background-clip: text;
+    animation:none;
     text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .palmiak-post-title:hover {
-    animation: shine 3s linear infinite;
+    animation: shine 1s linear 1;
 }
 
 @keyframes shine {
@@ -198,7 +199,7 @@
 
 .palmiak-image:hover:before {
     @apply opacity-100;
-    animation: gradient-animation 3s ease infinite;
+    animation: gradient-animation 1s ease 1;
 }
 
 .blog-item-tags a {
@@ -222,7 +223,7 @@
 }
 
 hr.gradient-line {
-    @apply relative h-[1px] w-[110px] bg-gradient-to-r from-palmiak_pink via-palmiak_green to-palmiak_blue border-none after:absolute after:w-full after:h-full after:z-10 after:top-0 after:left-0 after:border after:border-[1px] after:border-palmiak_bg after:border-dashed;
+    @apply relative h-[1px] w-[110px] bg-gradient-to-r from-palmiak_pink via-palmiak_green to-palmiak_blue border-none after:absolute after:w-full after:h-full after:z-10 after:top-0 after:left-0 after:border-[1px] after:border-palmiak_bg after:border-dashed;
 }
 
 @keyframes gradient-animation {
@@ -252,14 +253,14 @@ hr.gradient-line {
     left: calc(-1 * var(--borderWidth));
     height: calc(100% + var(--borderWidth) * 2);
     width: calc(100% + var(--borderWidth) * 2);
-    animation: animatedgradient 3s ease alternate infinite;
     background-size: 300% 300%;
     z-index: -1;
-    @apply absolute opacity-0 rounded-2xl transition-all duration-150 bg-gradient-to-br from-palmiak_pink via-palmiak_green to-palmiak_blue;
+    @apply absolute opacity-0 rounded-2xl duration-150 bg-gradient-to-br from-palmiak_pink via-palmiak_green to-palmiak_blue;
 }
 
 .gradient-border:hover:after {
     @apply opacity-100;
+    animation: animatedgradient 1s ease alternate 1;
 }
 
 @keyframes animatedgradient {
@@ -280,7 +281,6 @@ hr.gradient-line {
     left: 0;
     width: 50vmax;
     z-index: -8;
-    animation: move 10s ease-in-out infinite;
     transform-origin: 50% 50%;
 }
 
