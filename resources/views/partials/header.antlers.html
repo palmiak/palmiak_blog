@@ -1,7 +1,7 @@
 <header class="fixed z-40 top-0 left-0 w-full bg-palmiak_bg/80 backdrop-blur-[10px]">
     <div class="flex items-center mx-auto max-w-6xl px-5 py-8">
         <div class="flex-1">
-            <a href="{{ link to="/" }}" class="block" aria-label="Return to the homepage">
+            <a href="{{ link to=" /" }}" class="block" aria-label="Return to the homepage">
                 {{ if publication:name }}
 
                 <svg width="177" height="39" viewBox="0 0 177 39" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,13 +68,13 @@
             </a>
         </div>
 
-        <div class="pl-5 relative sm:hidden" x-data="{ open : false }">
-            <button class="block cursor-pointer p-2 bg-zinc-800 rounded-lg" aria-label="Menu" @click="open = true">
+        <div class="pl-5 relative lg:hidden" x-data="{ open : false }">
+            <button class="block cursor-pointer p-3 bg-palmiak_lightdark rounded-full" aria-label="Menu" @click="open = true">
                 {{ svg src="/assets/icons/more-vertical.svg" class="h-6 w-6" }}
             </button>
 
             <div x-show="open" @click.outside="open = false" x-transition
-                class="absolute top-10 right-0 shadow-lg bg-zinc-700 rounded-lg p-1 max-w-[280px] min-w-[120px] sm:static sm:block">
+                class="absolute top-[55px] right-0 shadow-lg bg-palmiak_lightdark rounded-lg p-1 max-w-[280px] min-w-[120px] lg:static lg:block">
                 <ul class="font-bold font-palmiak-font tracking-widest">
                     {{ nav:top_nav select="title|url" }}
                     <li>
@@ -93,7 +93,7 @@
             </div>
         </div>
 
-        <ul class="hidden justify-start items-center gap-5 md:inline-flex font-bold font-palmiak-font tracking-widest">
+        <ul class="hidden justify-start items-center gap-5 lg:inline-flex font-bold font-palmiak-font tracking-widest">
             <!-- {{ nav:top_nav select="title|url" }}
             <li class="ml-5">
                 <a href="{{ url }}"
@@ -131,18 +131,18 @@
                     newsletter
                 </a>
             </li>
-            {{ if publication:show_tags_navigation }}
-            <li>
-                <a href="{{ link to=" posts/tags" }}"
-                    class="text-white text-[15px] transition-all duration-150 hover:text-palmiak_green">Tags</a>
-            </li>
-            {{ /if }}
             <li>
                 <a href=""
                     class="h-[62px] flex rounded-full bg-gradient-to-r from-palmiak_pink via-palmiak_green to-palmiak_blue p-[1px]">
                     <div class="text-white text-base font-bold font-palmiak-font-title tracking-wide flex rounded-full h-full items-center justify-center bg-palmiak_bg back px-5 transition-all duration-150 hover:bg-opacity-80 text-[15px]">contact me</div>
                 </a>
             </li>
+            {{ if publication:show_tags_navigation }}
+            <li>
+                <a href="{{ link to=" posts/tags" }}"
+                    class="text-white text-[15px] transition-all duration-150 hover:text-palmiak_green">Tags</a>
+            </li>
+            {{ /if }}
         </ul>
     </div>
 </header>
