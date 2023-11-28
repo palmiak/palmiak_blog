@@ -55,18 +55,20 @@
 }
 
 @layer components {
-    .content {
-        @apply text-lg px-6;
+    .palmiak-image.image {
+        @apply rounded-xl;
     }
 
-    .content.page {
-        @apply text-lg px-0;
+    .image img {
+        @apply rounded-xl relative;
     }
 
-    .content>* {
-        @apply max-w-3xl mx-auto;
+    .palmiak-image.image.wide:before {
+        display: none;
     }
-/* 
+}
+
+@media screen and (min-width:1400px) {
     .image.wide {
         left: 50%;
         margin-left: -50vw;
@@ -80,78 +82,10 @@
 
     .image.wide img {
         display: inline-block;
-        @apply m-0;
-    } */
-
-    .content .image.wide figcaption {
-        @apply max-w-4xl mx-auto text-center;
-    }
-
-    .content p {
-        @apply leading-relaxed mb-6;
-    }
-
-    .content blockquote {
-        @apply text-3xl my-16 text-center text-white font-serif max-w-lg mx-auto;
-    }
-
-    .content>img,
-    .content p img {
-        @apply rounded-xl my-8 mx-auto;
-    }
-
-    .content .image {
-        @apply mx-auto my-10;
-    }
-
-    .content .image img {
-        @apply rounded-xl;
-    }
-
-    .content .image figcaption {
-        @apply mt-2;
-    }
-
-    .content .image.narrow figcaption {
-        @apply text-center;
-    }
-
-    .content p a {
-        @apply underline text-palmiak_blue hover:text-palmiak_pink transition-colors;
-    }
-
-    .content ul {
-        @apply my-5 pl-10 list-disc;
-    }
-
-    .content ol {
-        @apply my-5 pl-10 list-decimal;
-    }
-
-    .content li p {
-        @apply mb-0;
-    }
-
-    .content hr {
-        @apply my-12 border-zinc-700 max-w-[60%] mx-auto;
-    }
-
-    .content code {
-        @apply text-[#e0af68] bg-zinc-800 px-2 py-1 rounded-lg;
-    }
-
-    .content pre {
-        @apply bg-zinc-800 p-8 rounded-lg my-8;
-    }
-
-    .content pre code {
-        @apply block text-white bg-zinc-800 p-0 rounded-none whitespace-pre;
-    }
-
-    .content p~pre {
-        @apply mt-0;
+        @apply m-0 max-w-[1400px] rounded-lg;
     }
 }
+
 
 .palmiak-post-title {
     background: linear-gradient(45deg, #F027A6 0%, #16E6F3 20%, #A05FE0 50%, #16E6F3 80%, #F027A6 100%);
