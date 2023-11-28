@@ -1,4 +1,4 @@
-<footer class="py-8 text-sm text-zinc-300">
+<!--<footer class="py-8 text-sm text-zinc-300">
     <div class="flex items-center mx-auto max-w-6xl px-5">
         <div class="flex-1 pr-5">
             &copy; {{ now format="Y" }} {{ publication:name }}
@@ -15,5 +15,81 @@
                 </a>
             {{ /publication:footer_links }}
         </div>
+    </div>
+</footer>-->
+
+<footer class="">
+    <div class="flex max-lg:flex-col items-center mx-auto max-w-6xl px-5 pt-10 pb-5">
+        <div class="flex-1 max-lg:mb-7">
+            <a href="{{ link to=" /" }}" class="block" aria-label="Return to the homepage">
+                {{ if publication:name }}
+                <svg width="46" height="39" viewBox="0 0 46 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M45.832 17.17L23.0501 27.8999V21.9501L37.7973 15.1359C38.4415 14.8308 39.1026 14.5765 39.7806 14.3731C40.4586 14.1697 40.9841 14.0341 41.357 13.9663C40.9841 13.8985 40.4756 13.7629 39.8314 13.5594C39.1534 13.3221 38.4754 13.0509 37.7973 12.7458L23.0501 5.93155V0.0834961L45.832 10.8134V17.17ZM0 28.1865L22.782 38.9164V32.9667L8.03471 26.1524C7.39058 25.8473 6.7295 25.593 6.05146 25.3896C5.37343 25.1862 4.84795 25.0506 4.47503 24.9828C4.84795 24.915 5.35648 24.7794 6.00061 24.576C6.67864 24.3387 7.35668 24.0674 8.03471 23.7623L22.782 16.9481V11.1L0 21.8299V28.1865Z" fill="url(#paint0_linear_73_6)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_73_6" x1="4.03224" y1="30.3225" x2="43.6153" y2="16.8395" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F027A6"/>
+                    <stop offset="0.0001" stop-color="#F027A6"/>
+                    <stop offset="0.515625" stop-color="#A05FE0"/>
+                    <stop offset="1" stop-color="#16E6F3"/>
+                    </linearGradient>
+                    </defs>
+                </svg>
+                {{ /if }}
+            </a>
+        </div>
+
+        <ul class="justify-start items-center gap-5 inline-flex max-lg:flex max-lg:flex-col  max-lg:gap-3 font-bold font-palmiak-font tracking-widest">
+            <li>
+                <a href="{{ url }}"
+                    class="text-white text-[13px] transition-all duration-150 hover:text-palmiak_green">
+                    home
+                </a>
+            </li>
+            <li>
+                <a href="{{ url }}"
+                    class="text-white text-[13px] transition-all duration-150 hover:text-palmiak_green">
+                    about me
+                </a>
+            </li>
+            <li>
+                <a href="{{ url }}"
+                    class="text-white text-[13px] transition-all duration-150 hover:text-palmiak_green">
+                    blog
+                </a>
+            </li>
+            <li>
+                <a href="{{ url }}"
+                    class="text-white text-[13px] transition-all duration-150 hover:text-palmiak_green">
+                    code & coffee show
+                </a>
+            </li>
+            <li>
+                <a href="{{ url }}"
+                    class="text-white text-[13px] transition-all duration-150 hover:text-palmiak_green">
+                    newsletter
+                </a>
+            </li>
+            <li>
+                <div class="justify-start items-center gap-5 inline-flex max-lg:mt-7">
+                    <a href="" class="rounded-full w-[50px] h-[50px] bg-palmiak_pink flex relative transition-all duration-150 hover:bg-palmiak_lightdark hover:bg-opacity-40">
+                        {{ svg src="linkedin" class="absolute inset-1/2 -translate-y-1/2 -translate-x-1/2" }}
+                    </a>
+
+                    <a href="" class="rounded-full w-[50px] h-[50px] bg-palmiak_green flex relative transition-all duration-150 hover:bg-palmiak_lightdark hover:bg-opacity-40">
+                        {{ svg src="iks" class="absolute inset-1/2 -translate-y-1/2 -translate-x-1/2" }}
+                    </a>
+
+                    <a href="" class="rounded-full w-[50px] h-[50px] bg-palmiak_blue flex relative transition-all duration-150 hover:bg-palmiak_lightdark hover:bg-opacity-40">
+                        {{ svg src="insta" class="absolute inset-1/2 -translate-y-1/2 -translate-x-1/2" }}
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="flex items-center justify-end max-lg:justify-center mx-auto max-w-6xl px-5 pt-5 pb-10 max-lg:text-center">
+        <p class="text-[14px] text-white/30">
+            Copyright &copy; {{ now format="Y" }} by {{ publication:name }}. Design & code by <a href="https://agnieszkapalmowska.myportfolio.com/" target="_blank" class="underline hover:text-white transition-all duration-150">Agnieszka Palmowska Design</a>.
+        </p>
     </div>
 </footer>
