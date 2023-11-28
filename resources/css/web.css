@@ -55,27 +55,6 @@
 }
 
 @layer components {
-    h1 {
-        @apply text-5xl md:text-5xl mb-10 font-bold text-white font-palmiak-font-title;
-    }
-
-    h2 {
-        @apply text-4xl lg:text-4xl mt-10 mb-4 font-bold text-white font-palmiak-font-title;
-    }
-
-    article h2 {
-        @apply text-3xl lg:text-4xl mt-10 mb-4 font-bold text-palmiak_pink font-palmiak-font;
-
-    }
-
-    h3 {
-        @apply text-2xl mt-8 mb-4 font-bold text-white font-palmiak-font-title;
-    }
-
-    h4 {
-        @apply text-xl mt-8 mb-4 font-bold text-white font-palmiak-font-title;
-    }
-
     .content {
         @apply text-lg px-6;
     }
@@ -87,10 +66,22 @@
     .content>* {
         @apply max-w-3xl mx-auto;
     }
-
-    .content .image.wide {
-        @apply max-w-6xl;
+/* 
+    .image.wide {
+        left: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        max-width: 100vw;
+        position: relative;
+        right: 50%;
+        width: 100vw;
+        text-align: center;
     }
+
+    .image.wide img {
+        display: inline-block;
+        @apply m-0;
+    } */
 
     .content .image.wide figcaption {
         @apply max-w-4xl mx-auto text-center;
@@ -146,7 +137,7 @@
     }
 
     .content code {
-        @apply text-sm text-[#e0af68] bg-zinc-800 px-2 py-1 rounded-lg;
+        @apply text-[#e0af68] bg-zinc-800 px-2 py-1 rounded-lg;
     }
 
     .content pre {
@@ -154,7 +145,7 @@
     }
 
     .content pre code {
-        @apply block text-sm text-white bg-zinc-800 p-0 rounded-none whitespace-pre;
+        @apply block text-white bg-zinc-800 p-0 rounded-none whitespace-pre;
     }
 
     .content p~pre {
