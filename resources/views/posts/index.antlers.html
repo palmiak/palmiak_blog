@@ -1,13 +1,12 @@
 <h3 class="container mx-auto px-5 text-center text-white text-xl font-bold font-palmiak-font-title m-0 mt-10">
-    #{{ title }}</h3>
+    Latest posts</h3>
 
 <div class="container mx-auto max-w-[1400px] px-5 grid grid-cols-1 min-[1024px]:grid-cols-2 gap-7 mt-10">
-    {{ entries sort="date:desc" paginate="100" }}
-    {{ results }}
+    {{ collection:posts paginate="6" as="posts" sort="date:desc" }}
+    {{ posts }}
         {{ partial:partials/blogitem lazy="true" }}
-    {{ /results }}
-    {{ /entries }}
+    {{ /posts }}
+    {{ /collection:posts }}
 </div>
 
 {{ partial:partials/newsletterbox }}
-
