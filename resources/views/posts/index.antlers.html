@@ -4,9 +4,36 @@
 <div class="container mx-auto max-w-[1400px] px-5 grid grid-cols-1 min-[1024px]:grid-cols-2 gap-7 mt-10">
     {{ collection:posts paginate="6" as="posts" sort="date:desc" }}
     {{ posts }}
-        {{ partial:partials/blogitem lazy="true" }}
+    {{ partial:partials/blogitem lazy="true" }}
     {{ /posts }}
     {{ /collection:posts }}
+</div>
+
+<div class="container mx-auto max-w-[1400px] px-5 mt-10 text-center flex flex-nowrap items-center justify-center gap-7">
+    <a href="" class="h-[62px] flex rounded-full bg-palmiak_lightdark p-[2px]">
+        <div
+            class="text-white text-base font-bold font-palmiak-font-title tracking-wide flex rounded-full h-full items-center justify-center bg-palmiak_bg back px-6 transition-all duration-150 hover:bg-opacity-50 text-[15px]">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="rotate-180">
+                <path
+                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+                    class="fill-white" />
+            </svg>
+            <span class="inline-block ml-6">Prev</span>
+        </div>
+    </a>
+
+    <a href=""
+        class="h-[62px] flex rounded-full bg-gradient-to-r from-palmiak_pink via-palmiak_green to-palmiak_blue p-[2px]">
+        <div
+            class="text-white text-base font-bold font-palmiak-font-title tracking-wide flex rounded-full h-full items-center justify-center bg-palmiak_bg back px-6 transition-all duration-150 hover:bg-opacity-80 text-[15px]">
+            <span class="inline-block mr-6">Next</span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                <path
+                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+                    class="fill-white" />
+            </svg>
+        </div>
+    </a>
 </div>
 
 {{ partial:partials/newsletterbox }}
