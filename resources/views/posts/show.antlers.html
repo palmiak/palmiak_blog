@@ -1,68 +1,109 @@
-<article class="content">
-    <div class="flex flex-col mb-8 sm:flex-row sm:items-center">
-        <div class="flex-1 pr-5">
+<article class="container mx-auto max-w-[1400px] px-5 grid grid-cols-1 gap-8">
+    <div class="max-w-3xl mx-auto grid grid-cols-1 gap-7">
+        {{ if tags }}
+        <div class="blog-item-tags justify-start items-center gap-5 inline-flex">
+            {{ tags }}
+            <a href="{{ url }}" class="">
+                <div class="text-white text-xs font-normal font-palmiak-font-title tracking-wide">{{ title }}</div>
+            </a>                
+            {{ /tags }}
+        </div>
+        {{ /if }}
+
+        <h1 class="text-2xl md:text-6xl font-bold font-palmiak-font-title m-0 leading-tight">{{ title }}</h1>
+        <hr class="gradient-line" />
+
+        <div>
             {{ if publication:show_post_author }}
-                Written by <b class="text-white">{{ author:name }}</b><br>
-                <span class="text-zinc-300 font-medium">on {{ date format="Y-m-d" }}</span>
+                Written by <strong class="text-white text-sm font-medium font-palmiak-font leading-normal tracking-widest">{{ author:name }}</strong><br>
+                <span class="text-white text-sm font-medium font-palmiak-font leading-normal tracking-widest">on {{ date format="Y-m-d" }}</span>
             {{ else }}
-                <span class="text-zinc-300 font-medium">{{ date format="Y-m-d" }}</span>
+                <span class="text-white text-sm font-medium font-palmiak-font leading-normal tracking-widest">{{ date format="Y-m-d" }}</span>
             {{ /if }}
         </div>
-
-        {{ if tags }}
-            <div class="mt-5 flex-wrap inline-flex items-center">
-                {{ tags }}
-                    <a href="{{ url }}" class="rounded-3xl bg-gradient-to-r from-palmiak_blue to-palmiak_green font-palmiak-font uppercase tracking-wider text-xs px-0.5 py-0.5 transition-all mr-4 mb-2">
-                        <span class="block bg-zinc-900 rounded-3xl py-2 px-5 transition-all text-white hover:bg-white hover:text-zinc-900">
-                            {{ title }}
-                        </span>
-                    </a>
-                {{ /tags }}
-            </div>
-        {{ /if }}
     </div>
 
-    <h1 class="palmiak-post-title mb-10 text-4xl">{{ title }}</h1>
     {{ if thumbnail }}
-    <div class="image wide">
-        <picture class="rounded-md block mb-10 palmiak-image">
+    <div class="blog-item gradient-border p-7 bg-palmiak_bg border border-indigo-950 border-opacity-50">
+        <picture class="rounded-md block mb-0 palmiak-image">
             <source media="(max-width:640px)" srcset="{{ glide :src="thumbnail" w="640" h="320" format="webp"}}" width="640" height="320" >
             <source media="(min-width: 641px) and (max-width:800px)" srcset="{{ glide :src="thumbnail" w="800" h="360" format="webp" }}" width="800" height="360" >
-            <img srcset="{{ glide :src="thumbnail" w="1104" h="600" format="webp"}}" width="1104" height="600" alt="{{ title }}" class="rounded-md">
+            <img srcset="{{ glide :src="thumbnail" w="1400" h="700" format="webp"}}" width="1400" height="700" alt="{{ title }}" class="rounded-md">
         </picture>
     </div>
     {{ /if }}
 
     {{ if intro }}
-        <div class="mb-10">
-            <p class="text-2xl text-white font-bold">{{ intro | nl2br | emojify }}</p>
-        </div>
+    <div class="max-w-3xl mx-auto grid grid-cols-1 gap-7">
+        <p class="text-2xl text-white font-bold">{{ intro | nl2br | emojify }}</p>
+    </div>
     {{ /if }}
 
+    <div class="
+        max-w-3xl mx-auto
+        prose
+        lg:prose-xl
+        prose-headings:text-white
+        prose-headings:font-palmiak-font-title
+        prose-p:text-white/70
+        prose-p:font-palmiak-font
+        prose-strong:text-white
+        prose-blockquote:font-palmiak-font-title
+        prose-ol:font-palmiak-font
+        prose-ul:font-palmiak-font
+        hover:prose-a:text-palmiak_green
+        hover:prose-a:prose-strong:text-palmiak_green
+        prose-headings:relative
+        prose-headings:pb-[24px]
+        prose-headings:before:w-[110px]
+        prose-headings:before:h-[1px]
+        prose-headings:before:absolute
+        prose-headings:before:bottom-[0px]
+        prose-headings:before:left-0
+        prose-headings:before:z-10
+        prose-headings:before:bg-gradient-to-r 
+        prose-headings:before:from-palmiak_pink 
+        prose-headings:before:via-palmiak_green 
+        prose-headings:before:to-palmiak_blue
+        prose-headings:after:w-[110px]
+        prose-headings:after:h-[1px]
+        prose-headings:after:absolute
+        prose-headings:after:bottom-[0px]
+        prose-headings:after:left-0
+        prose-headings:after:z-20
+        prose-headings:after:border-[1px] 
+        prose-headings:after:border-palmiak_bg 
+        prose-headings:after:border-dashed
+    ">
     {{ content }}
         {{ partial src="sets/{type}" }}
     {{ /content  }}
+    </div>
 
-    {{ partial:partials/newsletter }}
+    {{ partial:partials/newsletterbox }}
 
-    <h2 class="palmiak-post-title mb-10 text-2xl">Share your thoughts</h1>
+<div>
+    <div class="max-w-3xl">
+        <h2 class="text-xl md:text-2xl font-bold font-palmiak-font-title mb-10 text-white">Share your thoughts</h2>
 
-    <script src="https://giscus.app/client.js"
-        data-repo="palmiak/blog-comments"
-        data-repo-id="R_kgDOKSw90A"
-        data-category="General"
-        data-category-id="DIC_kwDOKSw90M4CZQxJ"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="transparent_dark"
-        data-lang="en"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-    </script>
+        <script src="https://giscus.app/client.js"
+            data-repo="palmiak/blog-comments"
+            data-repo-id="R_kgDOKSw90A"
+            data-category="General"
+            data-category-id="DIC_kwDOKSw90M4CZQxJ"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="top"
+            data-theme="transparent_dark"
+            data-lang="en"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+        </script>
+    </div>
+</div>
 </article>
 
 <div class="mt-20 text-center flex items-center justify-center">
