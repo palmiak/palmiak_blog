@@ -3,7 +3,7 @@ id: a7b5049f-b974-45b1-8380-8778cd29ef83
 blueprint: pages
 title: 'About me'
 updated_by: 93b8e665-714e-481d-af67-5ac201e067ef
-updated_at: 1689583104
+updated_at: 1701197179
 content:
   -
     type: paragraph

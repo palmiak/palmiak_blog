@@ -70,13 +70,13 @@
 
 @media screen and (min-width:1400px) {
     .image.wide {
-        left: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
-        max-width: 100vw;
+        left: 45%;
+        margin-left: -45vw;
+        margin-right: -45vw;
+        max-width: 90vw;
         position: relative;
-        right: 50%;
-        width: 100vw;
+        right: 45%;
+        width: 90vw;
         text-align: center;
     }
 
@@ -248,4 +248,82 @@ hr.gradient-line {
     hover:prose-a:text-palmiak_blue
     prose-a:transition-all
     prose-a:duration-150
+}
+
+.custom-substack-widget {
+    @apply grow w-full shrink basis-0 p-4 md:p-7 max-[700px]:p-0 bg-white bg-opacity-5 max-[700px]:bg-opacity-0 rounded-2xl border max-[700px]:border-none border-white border-opacity-20 flex-col justify-start items-center gap-3.5 inline-flex !important;
+    max-width:100%!important;
+}
+
+.custom-substack-widget input {
+    @apply border-none outline-none grow shrink basis-0 self-stretch text-center text-palmiak_bg text-lg font-normal font-palmiak-font leading-loose rounded-3xl px-8 py-5 !important;
+}
+.custom-substack-widget button {
+    @apply self-stretch text-white text-base font-medium font-palmiak-font-title tracking-wide px-8 py-5 bg-palmiak_bg rounded-3xl justify-center items-center gap-2.5 inline-flex transition-all duration-150 hover:bg-opacity-75 !important;
+}
+
+.custom-substack-widget+.error {
+    @apply text-white !important;
+}
+
+.prose-post {
+    @apply
+    prose
+    lg:prose-xl
+    prose-headings:text-white
+    prose-headings:font-palmiak-font-title
+    prose-p:text-white/80
+    prose-p:font-palmiak-font
+    prose-strong:text-white
+    prose-blockquote:font-palmiak-font-title
+    prose-ol:font-palmiak-font
+    prose-ul:font-palmiak-font
+    hover:prose-a:text-palmiak_green
+    hover:prose-a:prose-strong:text-palmiak_green
+    prose-headings:relative
+    prose-headings:pb-[24px]
+    prose-headings:before:w-[110px]
+    prose-headings:before:h-[1px]
+    prose-headings:before:absolute
+    prose-headings:before:bottom-[0px]
+    prose-headings:before:left-0
+    prose-headings:before:z-10
+    prose-headings:before:bg-gradient-to-r
+    prose-headings:before:from-palmiak_pink
+    prose-headings:before:via-palmiak_green
+    prose-headings:before:to-palmiak_blue
+    prose-headings:after:w-[110px]
+    prose-headings:after:h-[1px]
+    prose-headings:after:absolute
+    prose-headings:after:bottom-[0px]
+    prose-headings:after:left-0
+    prose-headings:after:z-20
+    prose-headings:after:border-[1px]
+    prose-headings:after:border-palmiak_bg
+    prose-headings:after:border-dashed
+    prose-code:text-palmiak_blue/90
+    lg:prose-code:text-xl
+    prose-figcaption:text-center
+    prose-figcaption:font-palmiak-font-title
+    prose-figcaption:text-white/80
+    prose-p:prose-figcaption:font-palmiak-font-title
+    prose-p:prose-figcaption:tracking-widest
+    prose-a:transition-all
+    prose-a:duration-150
+}
+.type div {
+    @apply
+    px-4 pt-1.5 pb-2 rounded-3xl border-[1.5px] text-[12px] border-dashed justify-end items-center gap-2.5 flex transition-all duration-150 text-white/90 text-white text-xs font-normal font-palmiak-font-title tracking-wide;
+}
+
+.type .podcast {
+    @apply bg-palmiak_pink bg-opacity-10 border-palmiak_pink;
+}
+
+.type .webinar {
+    @apply bg-palmiak_green bg-opacity-10 border-palmiak_green;
+}
+
+.type .article {
+    @apply bg-palmiak_blue bg-opacity-10 border-palmiak_blue;
 }

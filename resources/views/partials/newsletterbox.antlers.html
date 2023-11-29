@@ -7,17 +7,23 @@
             <div class="self-stretch text-white text-lg font-normal font-palmiak-font leading-loose">Get an weekly
                 email with news from around the web<br />Get updated about new blog posts<br />No spam</div>
         </div>
-        <form
-            class="grow shrink basis-0 p-4 md:p-7 max-[700px]:p-0 bg-white bg-opacity-5 max-[700px]:bg-opacity-0 rounded-2xl border max-[700px]:border-none border-white border-opacity-20 flex-col justify-start items-center gap-3.5 inline-flex">
-            <div
-                class="self-stretch px-8 py-5 max-[700px]:p-2 bg-white rounded-3xl justify-center items-center gap-2.5 inline-flex">
-                <input type="text" placeholder="example@gmail.com"
-                    class="border-none outline-none grow shrink basis-0 self-stretch text-center text-palmiak_bg text-lg font-normal font-palmiak-font leading-loose"/>
-            </div>
-            <button type="submit"
-                class="self-stretch text-white text-base font-medium font-palmiak-font-title tracking-wide px-8 py-5 bg-palmiak_bg rounded-3xl justify-center items-center gap-2.5 inline-flex transition-all duration-150 hover:bg-opacity-75">
-                subscribe now!
-            </button>
-        </form>
+        <div id="custom-substack-embed"></div>
     </div>
 </div>
+
+
+<script>
+ window.CustomSubstackWidget = {
+  substackUrl: "palmiakfp.substack.com",
+  placeholder: "example@gmail.com",
+  buttonText: "Subscribe",
+  theme: "custom",
+  colors: {
+    primary: "#FFFFFF",
+    input: "#FFFFFF",
+    email: "#FFFFFF",
+    text: "#FFFFFF",
+  }
+};
+</script>
+<script src="https://substackapi.com/widget.js" async></script>

@@ -16,9 +16,9 @@
         <div>
             {{ if publication:show_post_author }}
                 Written by <strong class="text-white text-sm font-medium font-palmiak-font leading-normal tracking-widest">{{ author:name }}</strong><br>
-                <span class="text-white text-sm font-medium font-palmiak-font leading-normal tracking-widest">on {{ date format="Y-m-d" }}</span>
+                <span class="text-white text-sm font-medium font-palmiak-font leading-normal tracking-widest">on {{ date format="Y - m - d" }}</span>
             {{ else }}
-                <span class="text-white text-sm font-medium font-palmiak-font leading-normal tracking-widest">{{ date format="Y-m-d" }}</span>
+                <span class="text-white text-sm font-medium font-palmiak-font leading-normal tracking-widest">{{ date format="Y - m - d" }}</span>
             {{ /if }}
         </div>
     </div>
@@ -33,61 +33,14 @@
     </div>
     {{ /if }}
 
-    {{ if intro }}
-    <div class="max-w-3xl mx-auto grid grid-cols-1 gap-7 px-5">
-        <p class="text-2xl text-white font-bold">{{ intro | nl2br | emojify }}</p>
-    </div>
-    {{ /if }}
+    <div class="px-5 prose-post">
+        {{ if intro }}
+            <p class="text-2xl text-white font-bold">{{ intro | nl2br | emojify }}</p>
+        {{ /if }}
 
-    <div class="
-        px-5
-        max-w-3xl
-        prose
-        lg:prose-xl
-        prose-headings:text-white
-        prose-headings:font-palmiak-font-title
-        prose-p:text-white/80
-        prose-p:font-palmiak-font
-        prose-strong:text-white
-        prose-blockquote:font-palmiak-font-title
-        prose-ol:font-palmiak-font
-        prose-ul:font-palmiak-font
-        hover:prose-a:text-palmiak_green
-        hover:prose-a:prose-strong:text-palmiak_green
-        prose-headings:relative
-        prose-headings:pb-[24px]
-        prose-headings:before:w-[110px]
-        prose-headings:before:h-[1px]
-        prose-headings:before:absolute
-        prose-headings:before:bottom-[0px]
-        prose-headings:before:left-0
-        prose-headings:before:z-10
-        prose-headings:before:bg-gradient-to-r
-        prose-headings:before:from-palmiak_pink
-        prose-headings:before:via-palmiak_green
-        prose-headings:before:to-palmiak_blue
-        prose-headings:after:w-[110px]
-        prose-headings:after:h-[1px]
-        prose-headings:after:absolute
-        prose-headings:after:bottom-[0px]
-        prose-headings:after:left-0
-        prose-headings:after:z-20
-        prose-headings:after:border-[1px]
-        prose-headings:after:border-palmiak_bg
-        prose-headings:after:border-dashed
-        prose-code:text-palmiak_blue/90
-        lg:prose-code:text-xl
-        prose-figcaption:text-center
-        prose-figcaption:font-palmiak-font-title
-        prose-figcaption:text-white/80
-        prose-p:prose-figcaption:font-palmiak-font-title
-        prose-p:prose-figcaption:tracking-widest
-        prose-a:transition-all
-        prose-a:duration-150
-    ">
-    {{ content }}
-        {{ partial src="sets/{type}" }}
-    {{ /content  }}
+        {{ content }}
+            {{ partial src="sets/{type}" }}
+        {{ /content  }}
     </div>
 
     {{ partial:partials/newsletterbox }}
