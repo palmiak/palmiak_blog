@@ -310,6 +310,10 @@ hr.gradient-line {
     prose-p:prose-figcaption:tracking-widest
     prose-a:transition-all
     prose-a:duration-150
+    prose-pre:bg-palmiak_bg
+    prose-pre:border
+    prose-pre:border-indigo-950
+    prose-pre:border-opacity-50;
 }
 .type div {
     @apply
