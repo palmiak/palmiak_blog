@@ -1,6 +1,6 @@
 <section class="container mx-auto px-5 max-[660px]:px-0 mt-10">
     <div
-        class="relative overflow-hidden min-h-[670px] max-[1023px]:pb-[480px] max-[660px]:rounded-none max-[1023px]:bg-[length:auto_600px] rounded-2xl grid items-center bg-[#0F0E14] bg-left-bottom bg-no-repeat px-10 py-12 hero-shadow">
+        class="relative overflow-hidden min-h-[670px] max-[1023px]:pb-[0px] max-[660px]:rounded-none max-[1023px]:bg-[length:auto_600px] rounded-2xl grid items-center bg-[#0F0E14] bg-left-bottom bg-no-repeat px-10 py-12 hero-shadow">
         <div class="relative z-20 self-stretch flex-col justify-center items-start gap-7 flex max-w-[700px]">
             <h1 class="text-3xl md:text-6xl font-bold font-palmiak-font-title m-0">Code & Coffee Show</h1>
             <hr class="gradient-line" />
@@ -38,8 +38,8 @@
                 </div>
             </div>
         </div>
-        <picture class="absolute bottom-0 right-0 rounded-2xl z-10">
-            <img src="/images/ccshero.png" alt="" class="block h-auto" quality="100" format="webp">
+        <picture class="absolute max-[1023px]:relative bottom-0 right-0 rounded-2xl z-10">
+            <img src="{{ glide src="/images/ccshero.png" quality="100" format="webp" }}" alt="" class="inline-block h-auto w-auto">
         </picture>
     </div>
 </section>
