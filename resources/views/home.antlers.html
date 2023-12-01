@@ -19,13 +19,9 @@
 <hr class="gradient-line mx-auto" />
 
 <div class="container mx-auto max-w-[1400px] px-5 justify-center items-start gap-7 flex flex-wrap">
-    {{ partial:partials/populartopic }}
-    {{ partial:partials/populartopic }}
-    {{ partial:partials/populartopic }}
-    {{ partial:partials/populartopic }}
-    {{ partial:partials/populartopic }}
-    {{ partial:partials/populartopic }}
-    {{ partial:partials/populartopic }}
+    {{ publication.popular_tags }}
+        {{ partial:partials/populartopic }}
+    {{ /publication.popular_tags }}
 </div>
 
 

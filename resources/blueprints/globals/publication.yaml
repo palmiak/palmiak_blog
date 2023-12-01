@@ -1,148 +1,126 @@
-sections:
+tabs:
   main:
     display: Main
-    fields:
+    sections:
       -
-        handle: name
-        field:
-          input_type: text
-          antlers: false
-          display: Name
-          type: text
-          icon: text
-          listable: hidden
-          instructions_position: above
-          read_only: false
-      -
-        handle: description
-        field:
-          character_limit: '160'
-          antlers: false
-          display: Description
-          type: textarea
-          icon: textarea
-          listable: hidden
-          instructions_position: above
-          read_only: false
-      -
-        handle: logo
-        field:
-          mode: list
-          container: assets
-          restrict: false
-          allow_uploads: true
-          show_filename: true
-          max_files: 1
-          display: Logo
-          type: assets
-          icon: assets
-          listable: hidden
-          instructions_position: above
-          read_only: false
-      -
-        handle: show_post_author
-        field:
-          default: false
-          display: 'Show Post Author'
-          type: toggle
-          icon: toggle
-          width: 50
-          listable: hidden
-          instructions_position: above
-          read_only: false
-      -
-        handle: show_tags_navigation
-        field:
-          default: true
-          display: 'Show Tags Navigation'
-          type: toggle
-          icon: toggle
-          width: 50
-          listable: hidden
-          instructions_position: above
-          read_only: false
+        fields:
+          -
+            handle: name
+            field:
+              input_type: text
+              antlers: false
+              display: Name
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+          -
+            handle: description
+            field:
+              character_limit: '160'
+              antlers: false
+              display: Description
+              type: textarea
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+          -
+            handle: logo
+            field:
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              max_files: 1
+              display: Logo
+              type: assets
+              icon: assets
+              listable: hidden
+              instructions_position: above
+          -
+            handle: popular_tags
+            field:
+              mode: default
+              create: true
+              taxonomies:
+                - tags
+              type: terms
+              display: 'Popular tags'
+              icon: taxonomy
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
   footer:
     display: Footer
-    fields:
+    sections:
       -
-        handle: footer_links
-        field:
-          collapse: false
-          sets:
-            new_set:
-              display: 'New Set'
-              fields:
-                -
-                  handle: name
-                  field:
-                    input_type: text
-                    antlers: false
-                    display: Name
-                    type: text
-                    icon: text
-                    listable: hidden
-                    instructions_position: above
-                    read_only: false
-                -
-                  handle: url
-                  field:
-                    display: URL
-                    type: link
-                    icon: link
-                    listable: hidden
-                    instructions_position: above
-                    read_only: false
-                -
-                  handle: icon
-                  field:
-                    mode: list
-                    container: assets
-                    restrict: false
-                    allow_uploads: true
-                    show_filename: true
-                    display: Icon
-                    type: assets
-                    icon: assets
-                    listable: hidden
-                    instructions_position: above
-                    read_only: false
-                    max_files: 1
-          display: 'Footer Links'
-          type: replicator
-          icon: replicator
-          listable: hidden
-          instructions_position: above
-          read_only: false
+        fields:
+          -
+            handle: footer_links
+            field:
+              collapse: false
+              sets:
+                new_set:
+                  display: 'New Set'
+                  fields:
+                    -
+                      handle: name
+                      field:
+                        input_type: text
+                        antlers: false
+                        display: Name
+                        type: text
+                        icon: text
+                        listable: hidden
+                        instructions_position: above
+                        read_only: false
+                    -
+                      handle: url
+                      field:
+                        display: URL
+                        type: link
+                        icon: link
+                        listable: hidden
+                        instructions_position: above
+                        read_only: false
+                    -
+                      handle: icon
+                      field:
+                        mode: list
+                        container: assets
+                        restrict: false
+                        allow_uploads: true
+                        show_filename: true
+                        display: Icon
+                        type: assets
+                        icon: assets
+                        listable: hidden
+                        instructions_position: above
+                        read_only: false
+                        max_files: 1
+              display: 'Footer Links'
+              type: replicator
+              icon: replicator
+              listable: hidden
+              instructions_position: above
   social:
     display: Social
-    fields:
+    sections:
       -
-        handle: twitter_card_image
-        field:
-          mode: list
-          container: assets
-          restrict: false
-          allow_uploads: true
-          show_filename: true
-          max_files: 1
-          display: 'Twitter Card Image'
-          type: assets
-          icon: assets
-          listable: hidden
-          instructions_position: above
-          read_only: false
-      -
-        handle: og_image
-        field:
-          mode: list
-          container: assets
-          restrict: false
-          allow_uploads: true
-          show_filename: true
-          max_files: 1
-          display: 'OG Image'
-          type: assets
-          icon: assets
-          listable: hidden
-          instructions_position: above
-          read_only: false
+        fields:
+          -
+            handle: og_image
+            field:
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              max_files: 1
+              display: 'OG Image'
+              type: assets
+              icon: assets
+              listable: hidden
+              instructions_position: above

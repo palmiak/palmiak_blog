@@ -3,14 +3,18 @@ data:
   name: 'maciek palmowski'
   description: 'My small little blog about WordPress, CI/CD, and Technology'
   logo: aerozeppelin-logo.svg
-  show_post_author: false
-  show_tags_navigation: false
+  popular_tags:
+    - headless
+    - astro
+    - cicd
+    - development
+    - conferences
   footer_links:
     -
+      id: u199xmt5
       name: Twitter
       url: 'https://twitter.com/palmiak_fp'
       icon: icons/twitter.svg
       type: new_set
       enabled: true
-  twitter_card_image: photo_2022-04-25_23-28-51.jpg
   og_image: photo_2022-04-25_23-28-51.jpg
