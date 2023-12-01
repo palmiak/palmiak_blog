@@ -43,6 +43,7 @@ return [
         public_path('js') => 'js',
         public_path('fonts') => 'fonts',
         public_path('assets') => 'assets',
+        public_path('images') => 'images',
     ],
 
     'symlinks' => [
