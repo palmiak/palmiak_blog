@@ -15,11 +15,13 @@ tabs:
           -
             handle: content
             field:
+              collapse: false
               always_show_set_button: false
+              previews: true
+              smart_typography: false
               buttons:
                 - h2
                 - h3
-                - h4
                 - bold
                 - italic
                 - unorderedlist
@@ -28,9 +30,9 @@ tabs:
                 - quote
                 - anchor
                 - image
-                - codeblock
-                - horizontalrule
+                - table
               save_html: false
+              inline: false
               toolbar_mode: fixed
               link_noopener: false
               link_noreferrer: false
@@ -40,12 +42,15 @@ tabs:
               allow_source: true
               enable_input_rules: true
               enable_paste_rules: true
-              antlers: false
+              antlers: true
+              remove_empty_nodes: false
               display: Content
               type: bard
               icon: bard
               listable: hidden
               instructions_position: above
+              visibility: visible
+              container: assets
   sidebar:
     display: Sidebar
     sections:
@@ -59,82 +64,12 @@ tabs:
           -
             handle: template
             field:
+              hide_partials: true
+              blueprint: false
               type: template
               display: Template
-              localizable: true
-          -
-            handle: width_field
-            field:
-              options:
-                - 25
-                - 33
-                - 50
-                - 66
-                - 75
-                - 100
-              default: 100
-              display: 'Width Field'
-              type: width
-              icon: width
+              icon: template
               listable: hidden
               instructions_position: above
               visibility: visible
               hide_display: false
-sections:
-  main:
-    display: Main
-    fields:
-      -
-        handle: title
-        field:
-          type: text
-          required: true
-          validate:
-            - required
-      -
-        handle: content
-        field:
-          collapse: false
-          always_show_set_button: false
-          previews: true
-          smart_typography: false
-          buttons:
-            - h2
-            - h3
-            - bold
-            - italic
-            - unorderedlist
-            - orderedlist
-            - removeformat
-            - quote
-            - anchor
-            - image
-            - table
-          save_html: false
-          inline: false
-          toolbar_mode: fixed
-          link_noopener: false
-          link_noreferrer: false
-          target_blank: false
-          reading_time: false
-          fullscreen: true
-          allow_source: true
-          enable_input_rules: true
-          enable_paste_rules: true
-          antlers: true
-          remove_empty_nodes: false
-          display: Content
-          type: bard
-          icon: bard
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          container: assets
-  sidebar:
-    display: Sidebar
-    fields:
-      -
-        handle: slug
-        field:
-          type: slug
-          localizable: true

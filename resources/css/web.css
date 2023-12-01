@@ -4,150 +4,101 @@
 @tailwind components;
 @tailwind utilities;
 
-/* martel-regular - latin */
+/* unbounded-regular - latin */
 @font-face {
-    font-family: 'JetBrainsMono';
+    font-display: swap;
+    font-family: 'Unbounded';
     font-style: normal;
     font-weight: 400;
-    font-display: swap;
-    src: url('../fonts/JetBrainsMono-Regular.woff2') format('woff2');
+    src: url('../fonts/unbounded-v7-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* unbounded-700 - latin */
 @font-face {
-    font-family: 'JetBrainsMono';
+    font-display: swap;
+    font-family: 'Unbounded';
     font-style: normal;
     font-weight: 700;
-    font-display: swap;
-    src: url('../fonts/JetBrainsMono-Bold.woff2') format('woff2');
+    src: url('../fonts/unbounded-v7-latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* montserrat-regular - latin */
 @font-face {
-    font-family: 'JetBrainsMono';
-    font-style: normal;
-    font-weight: 800;
     font-display: swap;
-    src: url('../fonts/JetBrainsMono-ExtraBold.woff2') format('woff2');
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/montserrat-v26-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* montserrat-italic - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/montserrat-v26-latin-italic.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* montserrat-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/montserrat-v26-latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 @layer components {
-    h1 {
-        @apply text-5xl md:text-5xl mb-10 font-bold text-white font-palmiak-font;
-    }
-
-    h2 {
-        @apply text-4xl lg:text-4xl mt-10 mb-4 font-bold text-white font-palmiak-font;
-    }
-
-    article h2 {
-        @apply text-3xl lg:text-4xl mt-10 mb-4 font-bold text-palmiak_pink font-palmiak-font;
-
-    }
-
-    h3 {
-        @apply text-2xl mt-8 mb-4 font-bold text-white font-palmiak-font;
-    }
-
-    h4 {
-        @apply text-xl mt-8 mb-4 font-bold text-white font-palmiak-font;
-    }
-
-    .content {
-        @apply text-lg px-6;
-    }
-
-    .content.page {
-        @apply text-lg px-0;
-    }
-
-    .content > * {
-        @apply max-w-3xl mx-auto;
-    }
-
-    .content .image.wide {
-        @apply max-w-6xl;
-    }
-
-    .content .image.wide figcaption {
-        @apply max-w-4xl mx-auto text-center;
-    }
-
-    .content p {
-        @apply leading-relaxed mb-6;
-    }
-
-    .content blockquote {
-        @apply text-3xl my-16 text-center text-white font-serif max-w-lg mx-auto;
-    }
-
-    .content > img,
-    .content p img {
-        @apply rounded-xl my-8 mx-auto;
-    }
-
-    .content .image {
-        @apply mx-auto my-10;
-    }
-
-    .content .image img {
+    .palmiak-image.image {
         @apply rounded-xl;
     }
 
-    .content .image figcaption {
-        @apply mt-2;
+    .image img {
+        @apply rounded-xl relative;
     }
 
-    .content .image.narrow figcaption {
-        @apply text-center;
-    }
-
-    .content p a {
-        @apply underline text-palmiak_blue hover:text-palmiak_pink transition-colors;
-    }
-
-    .content ul {
-        @apply my-5 pl-10 list-disc;
-    }
-
-    .content ol {
-        @apply my-5 pl-10 list-decimal;
-    }
-
-    .content li p {
-        @apply mb-0;
-    }
-
-    .content hr {
-        @apply my-12 border-zinc-700 max-w-[60%] mx-auto;
-    }
-
-    .content code {
-        @apply text-sm text-[#e0af68] bg-zinc-800 px-2 py-1 rounded-lg;
-    }
-
-    .content pre {
-        @apply bg-zinc-800 p-8 rounded-lg my-8;
-    }
-
-    .content pre code {
-        @apply block text-sm text-white bg-zinc-800 p-0 rounded-none whitespace-pre;
-    }
-
-    .content p ~ pre {
-        @apply mt-0;
+    .palmiak-image.image.wide:before {
+        display: none;
     }
 }
+
+@media screen and (min-width:1400px) {
+    .image.wide {
+        left: 45%;
+        margin-left: -45vw;
+        margin-right: -45vw;
+        max-width: 90vw;
+        position: relative;
+        right: 45%;
+        width: 90vw;
+        text-align: center;
+    }
+
+    .image.wide img {
+        display: inline-block;
+        @apply m-0 max-w-[1400px] rounded-lg;
+    }
+}
+
 
 .palmiak-post-title {
     background: linear-gradient(45deg, #F027A6 0%, #16E6F3 20%, #A05FE0 50%, #16E6F3 80%, #F027A6 100%);
     background-size: 200% auto;
     background-clip: text;
+    animation:none;
     text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .palmiak-post-title:hover {
-    animation: shine 3s linear infinite;
+    animation: shine 1s linear 1;
 }
 
 @keyframes shine {
@@ -162,29 +113,221 @@
 
 .palmiak-image:before {
     content: "";
-    @apply absolute top-5 left-5 blur-3xl w-full h-full rounded-md block -z-10 transition-opacity duration-500 opacity-0;
-    /* @apply absolute top-0 left-0 w-full h-full rounded-md block z-10 mix-blend-multiply transition-opacity duration-300 delay-300 opacity-0; */
-    background: linear-gradient(49deg,#F027A6, #16E6F3, #A05FE0);
+    @apply absolute top-5 left-5 blur-3xl w-full h-full rounded-md block transition-opacity duration-500 opacity-0 bg-gradient-to-br from-palmiak_pink via-palmiak_green to-palmiak_blue;
     background-size: 180% 180%;
+    z-index: -4;
 }
 
 #revue-embed {
-    background: linear-gradient(49deg,#F027A6, #16E6F3, #A05FE0);
+    @apply bg-gradient-to-br from-palmiak_pink via-palmiak_green to-palmiak_blue;
 }
 
 .palmiak-image:hover:before {
     @apply opacity-100;
-    animation: gradient-animation 3s ease infinite;
+    animation: gradient-animation 1s ease 1;
+}
+
+.blog-item-tags a {
+    @apply px-3.5 pt-1.5 pb-2 rounded-3xl border justify-end items-center gap-2.5 flex transition-all duration-150;
+}
+
+.blog-item-tags a:nth-child(1) {
+    @apply bg-palmiak_pink bg-opacity-5 border-palmiak_pink hover:bg-palmiak_pink;
+}
+
+.blog-item-tags a:nth-child(2) {
+    @apply bg-palmiak_blue bg-opacity-5 border-palmiak_blue hover:bg-palmiak_blue hover:bg-opacity-50;
+}
+
+.blog-item-tags a:nth-child(3) {
+    @apply bg-palmiak_green bg-opacity-5 border-palmiak_green hover:bg-palmiak_green;
+}
+
+.blog-item-tags a:nth-child(4) {
+    @apply bg-palmiak_lightdark bg-opacity-5 border-palmiak_lightdark hover:bg-palmiak_lightdark;
+}
+
+hr.gradient-line {
+    @apply relative h-[1px] w-[110px] bg-gradient-to-r from-palmiak_pink via-palmiak_green to-palmiak_blue border-none after:absolute after:w-full after:h-full after:z-10 after:top-0 after:left-0 after:border-[1px] after:border-palmiak_bg after:border-dashed;
 }
 
 @keyframes gradient-animation {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
+}
+
+.gradient-border {
+    --borderWidth: 3px;
+    position: relative;
+    border-radius: var(--borderWidth);
+    @apply rounded-2xl;
+  }
+
+.gradient-border:after {
+    content: '';
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background-size: 300% 300%;
+    z-index: -1;
+    @apply absolute opacity-0 rounded-2xl duration-150 bg-gradient-to-br from-palmiak_pink via-palmiak_green to-palmiak_blue;
+}
+
+.gradient-border:hover:after {
+    @apply opacity-100;
+    animation: animatedgradient 1s ease alternate 1;
+}
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.circle-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50vmax;
+    z-index: -8;
+    transform-origin: 50% 50%;
+}
+
+.circle-bg svg {
+}
+
+@keyframes move {
+    0% {
+        transform: scale(1) translate(10px, -30px);
+    }
+    38% {
+        transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg);
+    }
+    40% {
+        transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg);
+    }
+    78% {
+        transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg);
+    }
+    80% {
+        transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg);
+    }
+    100% {
+        transform: scale(1) translate(10px, -30px);
+    }
+}
+
+.hero-shadow {
+    box-shadow: 1px 32px 46px 5px rgba(0, 0, 0, 0.25);
+}
+
+.prose {
+    @apply
+    prose-headings:text-white
+    prose-headings:font-palmiak-font-title
+    prose-headings:mb-5
+    prose-p:text-white
+    prose-a:text-white
+    prose-a:underline
+    hover:prose-a:text-palmiak_blue
+    prose-a:transition-all
+    prose-a:duration-150
+}
+
+.custom-substack-widget {
+    @apply grow w-full shrink basis-0 p-4 md:p-7 max-[700px]:p-0 bg-white bg-opacity-5 max-[700px]:bg-opacity-0 rounded-2xl border max-[700px]:border-none border-white border-opacity-20 flex-col justify-start items-center gap-3.5 inline-flex !important;
+    max-width:100%!important;
+}
+
+.custom-substack-widget input {
+    @apply border-none outline-none grow shrink basis-0 self-stretch text-center text-palmiak_bg text-lg font-normal font-palmiak-font leading-loose rounded-3xl px-8 py-5 !important;
+}
+.custom-substack-widget button {
+    @apply self-stretch text-white text-base font-medium font-palmiak-font-title tracking-wide px-8 py-5 bg-palmiak_bg rounded-3xl justify-center items-center gap-2.5 inline-flex transition-all duration-150 hover:bg-opacity-75 !important;
+}
+
+.custom-substack-widget+.error {
+    @apply text-white !important;
+}
+
+.prose-post {
+    @apply
+    prose
+    lg:prose-xl
+    prose-headings:text-white
+    prose-headings:font-palmiak-font-title
+    prose-p:text-white/80
+    prose-p:font-palmiak-font
+    prose-strong:text-white
+    prose-blockquote:font-palmiak-font-title
+    prose-ol:font-palmiak-font
+    prose-ul:font-palmiak-font
+    hover:prose-a:text-palmiak_green
+    hover:prose-a:prose-strong:text-palmiak_green
+    prose-headings:relative
+    prose-headings:pb-[24px]
+    prose-headings:before:w-[110px]
+    prose-headings:before:h-[1px]
+    prose-headings:before:absolute
+    prose-headings:before:bottom-[0px]
+    prose-headings:before:left-0
+    prose-headings:before:z-10
+    prose-headings:before:bg-gradient-to-r
+    prose-headings:before:from-palmiak_pink
+    prose-headings:before:via-palmiak_green
+    prose-headings:before:to-palmiak_blue
+    prose-headings:after:w-[110px]
+    prose-headings:after:h-[1px]
+    prose-headings:after:absolute
+    prose-headings:after:bottom-[0px]
+    prose-headings:after:left-0
+    prose-headings:after:z-20
+    prose-headings:after:border-[1px]
+    prose-headings:after:border-palmiak_bg
+    prose-headings:after:border-dashed
+    prose-code:text-palmiak_blue/90
+    lg:prose-code:text-xl
+    prose-figcaption:text-center
+    prose-figcaption:font-palmiak-font-title
+    prose-figcaption:text-white/80
+    prose-p:prose-figcaption:font-palmiak-font-title
+    prose-p:prose-figcaption:tracking-widest
+    prose-a:transition-all
+    prose-a:duration-150
+    prose-pre:bg-palmiak_bg
+    prose-pre:border
+    prose-pre:border-indigo-950
+    prose-pre:border-opacity-50;
+}
+.type div {
+    @apply
+    px-4 pt-1.5 pb-2 rounded-3xl border-[1.5px] text-[12px] border-dashed justify-end items-center gap-2.5 flex transition-all duration-150 text-white/90 text-white text-xs font-normal font-palmiak-font-title tracking-wide;
+}
+
+.type .podcast {
+    @apply bg-palmiak_pink bg-opacity-10 border-palmiak_pink;
+}
+
+.type .webinar {
+    @apply bg-palmiak_green bg-opacity-10 border-palmiak_green;
+}
+
+.type .article {
+    @apply bg-palmiak_blue bg-opacity-10 border-palmiak_blue;
 }

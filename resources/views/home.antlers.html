@@ -1,59 +1,44 @@
-{{ collection:posts paginate="10" as="posts" sort="date:desc" }}
-    {{ if no_results }}
-        <h2 class="italic tracking-tight text-center">Looks like there were no posts published yet.</h2>
-    {{ /if }}
+{{ partial:partials/aboutme-box }}
 
+<h3 class="container mx-auto px-5 text-center text-white text-xl font-bold font-palmiak-font-title m-0 mt-10">
+    Latest posts</h3>
+<hr class="gradient-line mx-auto" />
+
+<div class="container mx-auto max-w-[1400px] px-5 grid grid-cols-1 min-[1024px]:grid-cols-2 gap-7">
+    {{ collection:posts limit="2" as="posts" sort="date:desc" }}
     {{ posts }}
-        {{ partial:partials/list-item }}
-
-        {{ if index == 1 }}
-        <div class="mb-16 content page">
-            {{ partial:partials/newsletter }}
-        </div>
-        {{ /if }}
+    {{ partial:partials/blogitem }}
     {{ /posts }}
+    {{ /collection:posts }}
+</div>
 
-    {{ paginate }}
-        {{ if total_items > 10 }}
-            <div class="mt-10 text-center">
-                <ul class="inline-flex items-center justify-center">
-                    {{ if prev_page }}
-                        <li class="mx-2">
-                            <a href="{{ better_pagination:prev
-                                :page="current_page"
-                            }}" class="block px-3 py-2 border border-zinc-800 rounded-lg hover:text-white hover:border-zinc-700 transition-colors">
-                                {{ svg src="/assets/icons/arrow-left.svg" class="h-5 w-5" }}
-                            </a>
-                        </li>
-                    {{ else }}
-                        <li class="mx-2">
-                            <span class="block px-3 py-2 border border-zinc-800 rounded-lg opacity-70">
-                                {{ svg src="/assets/icons/arrow-left.svg" class="h-5 w-5" }}
-                            </span>
-                        </li>
-                    {{ /if }}
+{{ partial:partials/newsletterbox }}
 
-                    <li class="text-sm mx-5">
-                        {{ current_page }} / {{ total_pages }}
-                    </li>
+<h3 class="container mx-auto px-5 text-center text-white text-xl font-bold font-palmiak-font-title m-0 mt-10">
+    Popular blog topics</h3>
+<hr class="gradient-line mx-auto" />
 
-                    {{ if next_page }}
-                        <li class="mx-2">
-                            <a href="{{ better_pagination:next
-                                :page="current_page"
-                            }}" class="block px-3 py-2 border border-zinc-800 rounded-lg hover:text-white hover:border-zinc-700 transition-colors">
-                                {{ svg src="/assets/icons/arrow-right.svg" class="h-5 w-5" }}
-                            </a>
-                        </li>
-                    {{ else }}
-                        <li class="mx-2">
-                            <span class="block px-3 py-2 border border-zinc-800 rounded-lg opacity-70">
-                                {{ svg src="/assets/icons/arrow-right.svg" class="h-5 w-5" }}
-                            </span>
-                        </li>
-                    {{ /if }}
-                </ul>
-            </div>
-        {{ /if }}
-    {{ /paginate }}
-{{ /collection:posts }}
+<div class="container mx-auto max-w-[1400px] px-5 justify-center items-start gap-7 flex flex-wrap">
+    {{ publication.popular_tags }}
+        {{ partial:partials/populartopic }}
+    {{ /publication.popular_tags }}
+</div>
+
+
+<div class="container mx-auto max-w-[1400px] px-5 grid grid-cols-1 min-[1024px]:grid-cols-2 gap-7 mt-10">
+    {{ collection:posts limit="6" as="posts" sort="date:desc" offset="2" }}
+    {{ posts }}
+    {{ partial:partials/blogitem lazy="true" }}
+    {{ /posts }}
+    {{ /collection:posts }}
+</div>
+
+<div class="container mx-auto px-5 text-center mt-10">
+    <a href="/blog"
+    class="h-[62px] inline-flex rounded-full bg-gradient-to-r from-palmiak_pink via-palmiak_green to-palmiak_blue p-[1px]">
+    <div
+        class="text-white text-base font-bold font-palmiak-font-title tracking-wide inline-flex rounded-full h-full items-center justify-center bg-palmiak_bg back px-5 transition-all duration-150 hover:bg-opacity-80 text-[15px]">load more articles</div>
+    </a>
+</div>
+
+{{ partial:partials/codecoffee-box }}

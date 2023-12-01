@@ -1,0 +1,29 @@
+<div class="container mx-auto px-5">
+    <div
+        class="p-10 max-[700px]:p-7 bg-gradient-to-r from-palmiak_blue via-palmiak_green to-palmiak_pink rounded-2xl justify-start items-center grid grid-cols-1 min-[1024px]:grid-cols-2 gap-7 mt-10">
+        <div class="grow shrink basis-0 flex-col justify-start items-start gap-5 inline-flex">
+            <div class="text-white text-2xl md:text-4xl font-bold font-palmiak-font-title">Subscribe to my newsletter
+                and stay updated.</div>
+            <div class="self-stretch text-white text-lg font-normal font-palmiak-font leading-loose">Get an weekly
+                email with news from around the web<br />Get updated about new blog posts<br />No spam</div>
+        </div>
+        <div id="custom-substack-embed"></div>
+    </div>
+</div>
+
+
+<script>
+ window.CustomSubstackWidget = {
+  substackUrl: "palmiakfp.substack.com",
+  placeholder: "example@gmail.com",
+  buttonText: "Subscribe",
+  theme: "custom",
+  colors: {
+    primary: "#FFFFFF",
+    input: "#FFFFFF",
+    email: "#FFFFFF",
+    text: "#FFFFFF",
+  }
+};
+</script>
+<script src="https://substackapi.com/widget.js" async></script>

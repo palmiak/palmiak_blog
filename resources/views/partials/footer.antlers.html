@@ -1,19 +1,59 @@
-<footer class="py-8 text-sm text-zinc-300">
-    <div class="flex items-center mx-auto max-w-6xl px-5">
-        <div class="flex-1 pr-5">
-            &copy; {{ now format="Y" }} {{ publication:name }}
+<footer class="">
+    <div class="flex max-lg:flex-col items-center mx-auto max-w-6xl px-5 pt-10 pb-5">
+        <div class="flex-1 max-lg:mb-7">
+            <a href="{{ link to="/" }}" class="block" aria-label="Return to the homepage">
+                {{ svg src="logo" }}
+            </a>
         </div>
 
-        <div class="inline-flex items-center">
-            {{ publication:footer_links }}
-                <a href="{{ url }}" class="ml-4 hover:text-emerald-100 transition-colors" aria-label="{{ name }}" target="_blank" rel="noopener">
-                    {{ if icon }}
-                        {{ svg :src="icon" class="h-5 w-5" }}
-                    {{ else }}
-                        {{ name }}
-                    {{ /if }}
+        <ul class="justify-start items-center gap-5 inline-flex max-lg:flex max-lg:flex-col  max-lg:gap-3 font-bold font-palmiak-font tracking-widest">
+            <li>
+                <a href="{{ link to="/" }}"
+                    class="text-white text-[13px] transition-all duration-150 hover:text-palmiak_green">
+                    home
                 </a>
-            {{ /publication:footer_links }}
-        </div>
+            </li>
+            <li>
+                <a href="{{ link to="/blog" }}"
+                    class="text-white text-[13px] transition-all duration-150 hover:text-palmiak_green">
+                    blog
+                </a>
+            </li>
+            <li>
+                <a href="https://codeandcoffeeshow.dev/"
+                    class="text-white text-[13px] transition-all duration-150 hover:text-palmiak_green"
+                    target="about:blank">
+                    code & coffee show
+                </a>
+            </li>
+            <li>
+                <a href="https://newsletter.maciekpalmowski.dev/"
+                    class="text-white text-[13px] transition-all duration-150 hover:text-palmiak_green"
+                    target="about:blank">
+                    newsletter
+                </a>
+            </li>
+            <li>
+                <div class="justify-start items-center gap-5 inline-flex max-lg:mt-7">
+                    <a href="https://twitter.com/palmiak_fp" target="about:blank" class="rounded-full w-[50px] h-[50px] bg-palmiak_green flex relative transition-all duration-150 hover:bg-palmiak_lightdark hover:bg-opacity-40">
+                        {{ svg src="iks" class="absolute inset-1/2 -translate-y-1/2 -translate-x-1/2" }}
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/maciekpalmowski/" target="about:blank" class="rounded-full w-[50px] h-[50px] bg-palmiak_pink flex relative transition-all duration-150 hover:bg-palmiak_lightdark hover:bg-opacity-40">
+                        {{ svg src="linkedin" class="absolute inset-1/2 -translate-y-1/2 -translate-x-1/2" }}
+                    </a>
+
+                    <a href="https://github.com/palmiak" target="about:blank" class="rounded-full w-[50px] h-[50px] bg-palmiak_blue flex relative transition-all duration-150 hover:bg-palmiak_lightdark hover:bg-opacity-40">
+                        {{ svg src="github" class="absolute inset-1/2 -translate-y-1/2 -translate-x-1/2 fill-white" }}
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="flex items-center justify-end max-lg:justify-center mx-auto max-w-6xl px-5 pt-5 pb-10 max-lg:text-center">
+        <p class="text-[14px] text-white/30">
+            Copyright &copy; {{ now format="Y" }} by {{ publication:name }}. Design & code by <a href="https://agnieszkapalmowska.myportfolio.com/" target="_blank" class="underline hover:text-white transition-all duration-150">Agnieszka Palmowska Design</a>.
+        </p>
     </div>
 </footer>
