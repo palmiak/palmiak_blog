@@ -75,4 +75,21 @@ tabs:
             field:
               type: slug
               localizable: true
+          -
+            handle: og_image
+            field:
+              max_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Og Image'
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
 title: Goal
