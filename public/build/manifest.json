@@ -1,11 +1,23 @@
 {
-  "public/fonts/unbounded-v7-latin-regular.woff2": {
-    "file": "assets/unbounded-v7-latin-regular.9ad59444.woff2",
-    "src": "public/fonts/unbounded-v7-latin-regular.woff2"
+  "resources/fonts/montserrat-v26-latin-italic.woff2": {
+    "file": "assets/montserrat-v26-latin-italic.da22288b.woff2",
+    "src": "resources/fonts/montserrat-v26-latin-italic.woff2"
   },
-  "public/fonts/unbounded-v7-latin-700.woff2": {
+  "resources/fonts/unbounded-v7-latin-regular.woff2": {
+    "file": "assets/unbounded-v7-latin-regular.9ad59444.woff2",
+    "src": "resources/fonts/unbounded-v7-latin-regular.woff2"
+  },
+  "resources/fonts/unbounded-v7-latin-700.woff2": {
     "file": "assets/unbounded-v7-latin-700.d1df3113.woff2",
-    "src": "public/fonts/unbounded-v7-latin-700.woff2"
+    "src": "resources/fonts/unbounded-v7-latin-700.woff2"
+  },
+  "resources/fonts/montserrat-v26-latin-regular.woff2": {
+    "file": "assets/montserrat-v26-latin-regular.4b5816bb.woff2",
+    "src": "resources/fonts/montserrat-v26-latin-regular.woff2"
+  },
+  "resources/fonts/montserrat-v26-latin-700.woff2": {
+    "file": "assets/montserrat-v26-latin-700.a60b1ba9.woff2",
+    "src": "resources/fonts/montserrat-v26-latin-700.woff2"
   },
   "resources/js/web.js": {
     "file": "assets/web.69314604.js",
@@ -13,52 +25,8 @@
     "isEntry": true
   },
   "resources/css/web.css": {
-    "file": "assets/web.0b00326f.css",
+    "file": "assets/web.2d16c791.css",
     "src": "resources/css/web.css",
     "isEntry": true
-  },
-  "public/fonts/montserrat-v26-latin-regular.woff2": {
-    "file": "assets/montserrat-v26-latin-regular.4b5816bb.woff2",
-    "src": "public/fonts/montserrat-v26-latin-regular.woff2"
-  },
-  "public/fonts/montserrat-v26-latin-italic.woff2": {
-    "file": "assets/montserrat-v26-latin-italic.da22288b.woff2",
-    "src": "public/fonts/montserrat-v26-latin-italic.woff2"
-  },
-  "public/fonts/montserrat-v26-latin-700.woff2": {
-    "file": "assets/montserrat-v26-latin-700.a60b1ba9.woff2",
-    "src": "public/fonts/montserrat-v26-latin-700.woff2"
-  },
-  "resources/fonts/unbounded-v7-latin-regular.woff2": {
-    "file": "assets/unbounded-v7-latin-regular.9ad59444.woff2",
-    "src": "resources/fonts/unbounded-v7-latin-regular.woff2"
-  },
-  "resources/fonts/montserrat-v26-latin-700.woff2": {
-    "file": "assets/montserrat-v26-latin-700.a60b1ba9.woff2",
-    "src": "resources/fonts/montserrat-v26-latin-700.woff2"
-  },
-  "resources/fonts/unbounded-v7-latin-700.woff2": {
-    "file": "assets/unbounded-v7-latin-700.d1df3113.woff2",
-    "src": "resources/fonts/unbounded-v7-latin-700.woff2"
-  },
-  "resources/fonts/montserrat-v26-latin-italic.woff2": {
-    "file": "assets/montserrat-v26-latin-italic.da22288b.woff2",
-    "src": "resources/fonts/montserrat-v26-latin-italic.woff2"
-  },
-  "resources/fonts/montserrat-v26-latin-regular.woff2": {
-    "file": "assets/montserrat-v26-latin-regular.4b5816bb.woff2",
-    "src": "resources/fonts/montserrat-v26-latin-regular.woff2"
-  },
-  "resources/fonts/JetBrainsMono-Regular.woff2": {
-    "file": "assets/JetBrainsMono-Regular.bceff071.woff2",
-    "src": "resources/fonts/JetBrainsMono-Regular.woff2"
-  },
-  "resources/fonts/JetBrainsMono-Bold.woff2": {
-    "file": "assets/JetBrainsMono-Bold.df3f86c0.woff2",
-    "src": "resources/fonts/JetBrainsMono-Bold.woff2"
-  },
-  "resources/fonts/JetBrainsMono-ExtraBold.woff2": {
-    "file": "assets/JetBrainsMono-ExtraBold.28507c9c.woff2",
-    "src": "resources/fonts/JetBrainsMono-ExtraBold.woff2"
   }
 }

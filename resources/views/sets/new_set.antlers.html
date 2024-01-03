@@ -1,0 +1,28 @@
+{{ goals }}
+    <h2>{{ title }}</h2>
+    {{ description }}
+    <strong>General progress</strong>
+    <div class="flex items-center gap-x-3 whitespace-nowrap">
+        <div class="flex w-full h-2 rounded-full overflow-hidden bg-palmiak_lightdark" role="progressbar" aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100">
+            <div class="flex flex-col justify-center rounded-full overflow-hidden h-2 bg-palmiak_pink text-xs text-white text-center whitespace-nowrap transition duration-500" style="width: {{ progress }}%"></div>
+        </div>
+        <div class="w-10 text-end">
+            <span class="text-sm text-white dark:text-white">{{ progress }}%</span>
+        </div>
+    </div>
+    <strong>Subgoals:</strong>
+    {{ subtasks }}
+        <ul>
+            <li>
+                <p>{{ subtask }}</p>
+                <div class="flex items-center gap-x-3 whitespace-nowrap">
+                    <div class="flex w-full h-2 rounded-full overflow-hidden bg-palmiak_lightdark" role="progressbar" aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100">
+                        <div class="flex flex-col justify-center rounded-full overflow-hidden h-2 bg-palmiak_green text-xs text-white text-center whitespace-nowrap transition duration-500" style="width: {{ progress }}%"></div>
+                    </div>
+                    <div class="w-10 text-end">
+                        <span class="text-sm text-white dark:text-white">{{ progress }}%</span>
+                    </div>
+                </div></li>
+        </ul>
+    {{ /subtasks }}
+{{ /goals }}

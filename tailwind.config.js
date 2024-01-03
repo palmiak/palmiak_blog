@@ -19,7 +19,7 @@ module.exports = {
                 "palmiak_green": "#A05FE0",
                 "palmiak_bg": "#100F15",
                 "palmiak_lightdark": "#231F52",
-                "palmiak_deepdark": "0F0E14"
+                "palmiak_deepdark": "#0F0E14"
             },
         },
     },

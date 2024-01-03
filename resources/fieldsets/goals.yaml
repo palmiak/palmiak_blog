@@ -1,0 +1,141 @@
+title: Goals
+fields:
+  -
+    handle: goals
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: Goals
+          instructions: null
+          icon: null
+          sets:
+            goal:
+              display: Goal
+              instructions: null
+              icon: fire-flame-burn-hot
+              fields:
+                -
+                  handle: title
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Title
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                -
+                  handle: description
+                  field:
+                    restrict: false
+                    buttons:
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - link
+                    automatic_line_breaks: true
+                    automatic_links: false
+                    escape_markup: false
+                    heading_anchors: false
+                    smartypants: false
+                    table_of_contents: false
+                    antlers: false
+                    type: markdown
+                    display: Description
+                    icon: markdown
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                -
+                  handle: progress
+                  field:
+                    min: 0
+                    max: 100
+                    step: 1
+                    type: range
+                    display: Progress
+                    icon: range
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                -
+                  handle: subtasks
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      new_set_group:
+                        display: Subtasks
+                        instructions: null
+                        icon: null
+                        sets:
+                          subtasks:
+                            display: Subtasks
+                            instructions: null
+                            icon: arrow-right
+                            fields:
+                              -
+                                handle: subtask
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: Subtask
+                                  icon: text
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  hide_display: false
+                              -
+                                handle: progress
+                                field:
+                                  min: 0
+                                  max: 100
+                                  step: 1
+                                  type: range
+                                  display: Progress
+                                  icon: range
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  hide_display: false
+                              -
+                                handle: completed_on
+                                field:
+                                  mode: single
+                                  inline: false
+                                  full_width: false
+                                  columns: 1
+                                  rows: 1
+                                  time_enabled: false
+                                  time_seconds_enabled: false
+                                  type: date
+                                  display: 'Completed on'
+                                  icon: date
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  hide_display: false
+                    type: replicator
+                    display: Subtasks
+                    icon: replicator
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+      type: replicator
+      display: Goals
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
