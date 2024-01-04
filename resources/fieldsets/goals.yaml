@@ -54,19 +54,6 @@ fields:
                     visibility: visible
                     hide_display: false
                 -
-                  handle: progress
-                  field:
-                    min: 0
-                    max: 100
-                    step: 1
-                    type: range
-                    display: Progress
-                    icon: range
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    hide_display: false
-                -
                   handle: subtasks
                   field:
                     collapse: false
@@ -96,19 +83,6 @@ fields:
                                   visibility: visible
                                   hide_display: false
                               -
-                                handle: progress
-                                field:
-                                  min: 0
-                                  max: 100
-                                  step: 1
-                                  type: range
-                                  display: Progress
-                                  icon: range
-                                  listable: hidden
-                                  instructions_position: above
-                                  visibility: visible
-                                  hide_display: false
-                              -
                                 handle: completed_on
                                 field:
                                   mode: single
@@ -121,6 +95,70 @@ fields:
                                   type: date
                                   display: 'Completed on'
                                   icon: date
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  hide_display: false
+                              -
+                                handle: starting_value
+                                field:
+                                  type: integer
+                                  display: 'Starting value'
+                                  icon: integer
+                                  width: 33
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  hide_display: false
+                              -
+                                handle: current_value
+                                field:
+                                  type: integer
+                                  display: 'Current value'
+                                  icon: integer
+                                  width: 33
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  hide_display: false
+                              -
+                                handle: target_value
+                                field:
+                                  type: integer
+                                  display: 'Target value'
+                                  icon: integer
+                                  width: 33
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  hide_display: false
+                              -
+                                handle: is_done
+                                field:
+                                  default: false
+                                  type: toggle
+                                  display: 'Is done'
+                                  icon: toggle
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  hide_display: false
+                              -
+                                handle: task_type
+                                field:
+                                  options:
+                                    increase: Increase
+                                    decrease: Decrease
+                                    bool: True/False
+                                  taggable: false
+                                  push_tags: false
+                                  multiple: false
+                                  clearable: false
+                                  searchable: true
+                                  cast_booleans: false
+                                  type: select
+                                  display: 'Task type'
+                                  icon: select
                                   listable: hidden
                                   instructions_position: above
                                   visibility: visible
