@@ -8,9 +8,9 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                "palmiak-font": ['"Montserrat"', "serif"],
-                "palmiak-font-title": ['"Unbounded"', "serif"],
-                "palmiak-font-serif": ['"JetBrainsMono"', "serif"],
+                "palmiak-font": ['"Montserrat"', '"Montserrat override"', "serif"],
+                "palmiak-font-title": ['"Unbounded"', '"Unbounded override"', "serif"],
+                "palmiak-font-serif": ['"JetBrainsMono"', '"JetBrainsMono override"', "serif"],
             },
 
             colors: {

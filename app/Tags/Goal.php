@@ -6,27 +6,24 @@ use Statamic\Tags\Tags;
 
 class Goal extends Tags
 {
-    /**
-     * The {{ goal }} tag.
-     *
-     * @return string|array
-     */
     public function index()
     {
         switch ($this->context->raw('task_type')) {
             case 'increase':
-                return $this->increase();
+                $index = $this->increase( $this->context->raw('starting_value'), $this->context->raw('current_value'), $this->context->raw('target_value') );
             break;
             case 'decrease':
-                return $this->decrease();
+                $index = $this->decrease( $this->context->raw('starting_value'), $this->context->raw('current_value'), $this->context->raw('target_value') );
             break;
             case 'bool':
-                return $this->bool();
+                $index = $this->bool( $this->context->raw('is_done') );
             break;
             default:
-                return 0;
+                $index = 0;
             break;
         }
+
+        return $index;
     }
 
     public function general()
@@ -36,26 +33,46 @@ class Goal extends Tags
         $number_of_completed_tasks = 0;
 
         foreach( $subtasks as $subtask ) {
-            if ( $subtask['is_done'] ) {
+            switch ( $subtask['task_type'] ) {
+                case 'increase':
+                    $value = $this->increase( $subtask['starting_value'], $subtask['current_value'], $subtask['target_value'] );
+                break;
+                case 'decrease':
+                    $value = $this->decrease( $subtask['starting_value'], $subtask['current_value'], $subtask['target_value'] );
+                break;
+                case 'bool':
+                    $value = $this->bool( $subtask['is_done'] );
+                break;
+                default:
+                    $value = 0;
+                break;
+            }
+
+            if ( $this->is_done( $value ) ) {
                 $number_of_completed_tasks++;
             }
         }
 
-        return round($number_of_completed_tasks/$number_of_subtasks*100);
+        return (int) round($number_of_completed_tasks/$number_of_subtasks*100);
     }
 
-    public function increase()
+    public function increase( $starting_value, $current_value, $target_value )
     {
-        return round( ($this->context->raw('current_value') - $this->context->raw('starting_value')) / ( $this->context->raw('target_value') - $this->context->raw('starting_value') ) * 100 );
+        return (int) round( ($current_value - $starting_value) / ( $target_value - $starting_value ) * 100 );
     }
 
-    public function decrease()
+    public function decrease( $starting_value, $current_value, $target_value )
     {
-        return round( ($this->context->raw('starting_value') - $this->context->raw('current_value')) / ( $this->context->raw('starting_value') - $this->context->raw('target_value') ) * 100 );
+        return (int) round( ($starting_value - $current_value) / ( $starting_value - $target_value ) * 100 );
     }
 
-    public function bool()
+    public function bool( $is_done )
     {
-        return ($this->context->raw('is_done')) ? 100 : 0;
+        return $is_done ? 100 : 0;
+    }
+
+    public function is_done($value)
+    {
+        return ($value === 100) ? true : false;
     }
 }

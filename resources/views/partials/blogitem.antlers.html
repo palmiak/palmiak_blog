@@ -2,7 +2,9 @@
     class="blog-item gradient-border p-7 bg-palmiak_bg border border-indigo-950 border-opacity-50 flex-col justify-start items-start gap-9 inline-flex">
     <a href="{{ url }}">
         <picture class="rounded-md block palmiak-image">
-            <img srcset="{{ glide :src="thumbnail" w="700" h="350" format="webp"}}" width="700" height="350" alt="{{ title }}" class="rounded-2xl" {{if lazy=="true" }} loading="lazy"{{/if}}>
+            <source srcset="{{ glide :src="thumbnail" format="webp" width="640" height="320" }}" media="(max-width: 640px)" width="700" height="350" />
+            <source srcset="{{ glide :src="thumbnail" format="webp" width="768" height="384" }}" media="(max-width: 768px)" width="700" height="350" />
+            <img srcset="{{ glide :src="thumbnail" w="600" h="300" format="webp"}}" width="700" height="350" alt="{{ title }}" class="rounded-2xl" {{if lazy=="true" }} loading="lazy"{{/if}}>
         </picture>
     </a>
     {{ if tags }}
