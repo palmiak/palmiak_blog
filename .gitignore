@@ -4,6 +4,7 @@
 /public/vendor/statamic
 /public/js
 /public/css
+/public/buid
 /public/build/assets
 /storage/*.key
 /vendor
