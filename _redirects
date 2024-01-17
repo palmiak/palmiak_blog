@@ -28,4 +28,5 @@
 /cycling-around-the-tatry-mountains  /blog/cycling-around-the-tatry-mountains
 /deploying-wordpress-with-confidence /blog/deploying-wordpress-with-confidence
 /implement-ci-cd-step-by-step    /blog/implement-ci-cd-step-by-step
+/blog/statamic-for-wordpress-builders-intro-and-installation /blog/statamic-for-wordpress-developers-intro
 /page/* /blog/page/:splat
