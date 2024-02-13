@@ -72,6 +72,14 @@
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+@font-face {
+    font-family: "Montserrat-fallback";
+    size-adjust: 113.39999999999998%;
+    ascent-override: 80%;
+    src: local("Arial");
+}
+
+
 @layer components {
     .palmiak-image.image {
         @apply rounded-xl;
