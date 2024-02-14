@@ -30,6 +30,7 @@
         "flowbite": "^1.6.3",
         "fontaine": "^0.4.1",
         "highlight.js": "^11.5.0",
-        "http-server": "^14.1.1"
+        "http-server": "^14.1.1",
+        "quicklink": "^2.3.0"
     }
 }
