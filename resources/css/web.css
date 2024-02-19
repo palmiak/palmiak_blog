@@ -357,3 +357,8 @@ hr.gradient-line {
 .type .article {
     @apply bg-palmiak_blue bg-opacity-10 border-palmiak_blue;
 }
+
+pre code.hljs {
+    max-width: 80vw;
+    margin: 0 auto;
+}
