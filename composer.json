@@ -17,6 +17,7 @@
     "require": {
         "php": "^7.4 || ^8.0",
         "fruitcake/laravel-cors": "^2.0",
+        "goldnead/statamic-toc": "^1.4",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^9.0",
         "laravel/tinker": "^2.5",
