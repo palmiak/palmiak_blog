@@ -15,18 +15,17 @@
         }
     ],
     "require": {
-        "php": "^7.4 || ^8.0",
-        "fruitcake/laravel-cors": "^2.0",
+        "php": "^7.4 || ^8.0 || ^8.1",
         "guzzlehttp/guzzle": "^7.0.1",
-        "laravel/framework": "^9.0",
+        "laravel/framework": "^10.0",
         "laravel/tinker": "^2.5",
         "palmiak/feedamic": "dev-main",
-        "statamic/cms": "^4",
-        "statamic/ssg": "^2.0"
+        "statamic/cms": "^5",
+        "statamic/ssg": "^3"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
-        "spatie/laravel-ignition": "^1.0",
+        "spatie/laravel-ignition": "^2.0",
         "fakerphp/faker": "^1.9.1",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^6.1",
