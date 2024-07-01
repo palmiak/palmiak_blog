@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@view-transition {
+    navigation: auto;
+}
+
 ::view-transition-old(root) {
     animation: fade 0.2s linear forwards;
 }
