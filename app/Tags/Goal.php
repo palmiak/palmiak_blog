@@ -36,19 +36,23 @@ class Goal extends Tags
             switch ( $subtask['task_type'] ) {
                 case 'increase':
                     $value = $this->increase( $subtask['starting_value'], $subtask['current_value'], $subtask['target_value'] );
+                    $is_completed_value = $value >= 100;
                 break;
                 case 'decrease':
                     $value = $this->decrease( $subtask['starting_value'], $subtask['current_value'], $subtask['target_value'] );
+                    $is_completed_value = $value >= 100;
                 break;
                 case 'bool':
                     $value = $this->bool( $subtask['is_done'] );
+                    $is_completed_value = $subtask['is_done'];
                 break;
                 default:
                     $value = 0;
+                    $is_completed_value = false;
                 break;
             }
 
-            if ( $this->is_done( $value ) ) {
+            if ( $is_completed_value ) {
                 $number_of_completed_tasks++;
             }
         }
