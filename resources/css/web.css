@@ -52,7 +52,7 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/montserrat-v26-latin-regular.woff2') format('woff2');
+    src: url('../fonts/montserrat-v26-latin-ext-regular.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -62,7 +62,7 @@
     font-family: 'Montserrat';
     font-style: italic;
     font-weight: 400;
-    src: url('../fonts/montserrat-v26-latin-italic.woff2') format('woff2');
+    src: url('../fonts/montserrat-v26-latin-ext-italic.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -72,17 +72,9 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    src: url('../fonts/montserrat-v26-latin-700.woff2') format('woff2');
+    src: url('../fonts/montserrat-v26-latin-ext-700.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-@font-face {
-    font-family: "Montserrat-fallback";
-    size-adjust: 113.39999999999998%;
-    ascent-override: 80%;
-    src: local("Arial");
-}
-
 
 @layer components {
     .palmiak-image.image {

@@ -3,21 +3,21 @@
     "file": "assets/unbounded-v7-latin-regular.9ad59444.woff2",
     "src": "resources/fonts/unbounded-v7-latin-regular.woff2"
   },
-  "resources/fonts/montserrat-v26-latin-regular.woff2": {
-    "file": "assets/montserrat-v26-latin-regular.4b5816bb.woff2",
-    "src": "resources/fonts/montserrat-v26-latin-regular.woff2"
-  },
   "resources/fonts/unbounded-v7-latin-700.woff2": {
     "file": "assets/unbounded-v7-latin-700.d1df3113.woff2",
     "src": "resources/fonts/unbounded-v7-latin-700.woff2"
   },
-  "resources/fonts/montserrat-v26-latin-italic.woff2": {
-    "file": "assets/montserrat-v26-latin-italic.da22288b.woff2",
-    "src": "resources/fonts/montserrat-v26-latin-italic.woff2"
+  "resources/fonts/montserrat-v26-latin-ext-700.woff2": {
+    "file": "assets/montserrat-v26-latin-ext-700.bb5a456a.woff2",
+    "src": "resources/fonts/montserrat-v26-latin-ext-700.woff2"
   },
-  "resources/fonts/montserrat-v26-latin-700.woff2": {
-    "file": "assets/montserrat-v26-latin-700.a60b1ba9.woff2",
-    "src": "resources/fonts/montserrat-v26-latin-700.woff2"
+  "resources/fonts/montserrat-v26-latin-ext-italic.woff2": {
+    "file": "assets/montserrat-v26-latin-ext-italic.2ad967cd.woff2",
+    "src": "resources/fonts/montserrat-v26-latin-ext-italic.woff2"
+  },
+  "resources/fonts/montserrat-v26-latin-ext-regular.woff2": {
+    "file": "assets/montserrat-v26-latin-ext-regular.aece0b51.woff2",
+    "src": "resources/fonts/montserrat-v26-latin-ext-regular.woff2"
   },
   "resources/js/web.js": {
     "file": "assets/web.6482f2be.js",
@@ -25,7 +25,7 @@
     "isEntry": true
   },
   "resources/css/web.css": {
-    "file": "assets/web.8c48aebc.css",
+    "file": "assets/web.858288e5.css",
     "src": "resources/css/web.css",
     "isEntry": true
   }
