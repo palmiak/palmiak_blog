@@ -39,36 +39,34 @@ tabs:
               link_noopener: true
               link_noreferrer: true
               target_blank: true
-              antlers: true
               display: Content
               type: bard
               container: assets
               always_save: false
               remove_empty_nodes: false
               sets:
-                image:
-                  display: Image
-                  fields:
-                    -
-                      import: image
-                youtube:
-                  display: Youtube
-                  fields:
-                    -
-                      handle: url
-                      field:
-                        input_type: url
-                        antlers: false
-                        display: Url
-                        type: text
-                        icon: text
-                        listable: hidden
-                        instructions_position: above
-                alert:
-                  display: Alert
-                  fields:
-                    -
-                      import: alert
+                main:
+                  display: Main
+                  sets:
+                    image:
+                      display: Image
+                      fields:
+                        -
+                          import: image
+                    youtube:
+                      display: Youtube
+                      fields:
+                        -
+                          handle: url
+                          field:
+                            input_type: url
+                            display: Url
+                            type: text
+                    alert:
+                      display: Alert
+                      fields:
+                        -
+                          import: alert
   sidebar:
     display: Sidebar
     sections:

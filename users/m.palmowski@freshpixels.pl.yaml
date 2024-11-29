@@ -22,7 +22,7 @@ preferences:
           filters:
             status:
               status: draft
-      per_page: 10
+      per_page: 25
     pages:
       columns:
         - title
