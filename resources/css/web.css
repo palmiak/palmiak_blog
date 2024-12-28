@@ -9,23 +9,20 @@
 }
 
 ::view-transition-old(root) {
-    animation: fade 0.2s linear forwards;
+    animation: none;
+    z-index: -1;
 }
 
-  /* New stuff coming in */
 ::view-transition-new(root) {
-    animation: fade 0.3s linear reverse;
+    animation: unclip 1s;
+    clip-path: polygon(-100vmax 100%, 100% 100%, 100% -100vmax);
 }
 
-  @keyframes fade {
-    from {
-      opacity: 1;
+@keyframes unclip {
+    0% {
+        clip-path: polygon(100% 100%, 100% 100%, 100% 100%);
     }
-    to {
-      opacity: 0;
-    }
-  }
-
+}
 /* unbounded-regular - latin */
 @font-face {
     font-display: swap;
