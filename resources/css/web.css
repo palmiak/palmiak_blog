@@ -189,7 +189,7 @@ hr.gradient-line {
     position: relative;
     border-radius: var(--borderWidth);
     @apply rounded-2xl;
-  }
+}
 
 .gradient-border:after {
     content: '';
@@ -354,4 +354,23 @@ hr.gradient-line {
 pre code.hljs {
     max-width: 80vw;
     margin: 0 auto;
+}
+
+#progress {
+    @apply bg-gradient-to-br from-palmiak_pink via-palmiak_green to-palmiak_blue;
+    height: 3px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform-origin: left center;
+    width: 100%;
+    z-index:9;
+
+    animation: progressBar linear;
+    animation-timeline: scroll(root block);
+    animation-range: 0% calc(100% - 800px);
+}
+
+@keyframes progressBar {
+    from { transform: scaleX(0); }
 }
