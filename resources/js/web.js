@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if ( target ) {
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {s
+                if (entry.isIntersecting) {
                     confetti({
                         particleCount: 50,
                         spread: 70,
