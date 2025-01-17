@@ -374,3 +374,7 @@ pre code.hljs {
 @keyframes progressBar {
     from { transform: scaleX(0); }
 }
+
+::selection {
+    @apply bg-palmiak_pink selection:text-white;
+}
