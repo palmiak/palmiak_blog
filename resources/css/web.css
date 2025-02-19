@@ -1,90 +1,108 @@
-@import './plugins/highlightjs.css';
+@import './plugins/highlightjs.css' layer(base);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@view-transition {
-    navigation: auto;
+@config '../../tailwind.config.js';
+
+@utility palmiak-image {
+  &.image {
+    @apply rounded-xl;
+  }
+
+  &.image.wide:before {
+    display: none;
+  }
 }
 
-::view-transition-old(root) {
+@utility image {
+  &.palmiak-image {
+    @apply rounded-xl;
+  }
+
+  & img {
+    @apply rounded-xl relative;
+  }
+}
+
+.palmiak-image.wide:before {
+    display: none;
+}
+
+@utility wide {
+  &.palmiak-image.image:before {
+    display: none;
+  }
+}
+
+@layer utilities {
+  @view-transition {
+    navigation: auto;
+  }
+
+  ::view-transition-old(root) {
     animation: none;
     z-index: -1;
-}
+  }
 
-::view-transition-new(root) {
+  ::view-transition-new(root) {
     animation: unclip 1s;
     clip-path: polygon(-100vmax 100%, 100% 100%, 100% -100vmax);
-}
+  }
 
-@keyframes unclip {
+  @keyframes unclip {
     0% {
-        clip-path: polygon(100% 100%, 100% 100%, 100% 100%);
+      clip-path: polygon(100% 100%, 100% 100%, 100% 100%);
     }
-}
-/* unbounded-regular - latin */
-@font-face {
+  }
+  /* unbounded-regular - latin */
+  @font-face {
     font-display: swap;
     font-family: 'Unbounded';
     font-style: normal;
     font-weight: 400;
     src: url('../fonts/unbounded-v7-latin-regular.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
+  }
 
-/* unbounded-700 - latin */
-@font-face {
+  /* unbounded-700 - latin */
+  @font-face {
     font-display: swap;
     font-family: 'Unbounded';
     font-style: normal;
     font-weight: 700;
     src: url('../fonts/unbounded-v7-latin-700.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
+  }
 
-/* montserrat-regular - latin */
-@font-face {
+  /* montserrat-regular - latin */
+  @font-face {
     font-display: swap;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     src: url('../fonts/montserrat-v26-latin-ext-regular.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
+  }
 
-/* montserrat-italic - latin */
-@font-face {
+  /* montserrat-italic - latin */
+  @font-face {
     font-display: swap;
     font-family: 'Montserrat';
     font-style: italic;
     font-weight: 400;
     src: url('../fonts/montserrat-v26-latin-ext-italic.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
+  }
 
-/* montserrat-700 - latin */
-@font-face {
+  /* montserrat-700 - latin */
+  @font-face {
     font-display: swap;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     src: url('../fonts/montserrat-v26-latin-ext-700.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-@layer components {
-    .palmiak-image.image {
-        @apply rounded-xl;
-    }
-
-    .image img {
-        @apply rounded-xl relative;
-    }
-
-    .palmiak-image.image.wide:before {
-        display: none;
-    }
+  }
 }
 
 @media screen and (min-width:1400px) {
@@ -132,13 +150,13 @@
 
 .palmiak-image:before {
     content: "";
-    @apply absolute top-5 left-5 blur-3xl w-full h-full rounded-md block transition-opacity duration-500 opacity-0 bg-gradient-to-br from-palmiak_pink via-palmiak_green to-palmiak_blue;
+    @apply absolute top-5 left-5 blur-3xl w-full h-full rounded-md block transition-opacity duration-500 opacity-0 bg-linear-to-br from-palmiak_pink via-palmiak_green to-palmiak_blue;
     background-size: 180% 180%;
     z-index: -4;
 }
 
 #revue-embed {
-    @apply bg-gradient-to-br from-palmiak_pink via-palmiak_green to-palmiak_blue;
+    @apply bg-linear-to-br from-palmiak_pink via-palmiak_green to-palmiak_blue;
 }
 
 .palmiak-image:hover:before {
@@ -151,23 +169,23 @@
 }
 
 .blog-item-tags a:nth-child(1) {
-    @apply bg-palmiak_pink bg-opacity-5 border-palmiak_pink hover:bg-palmiak_pink;
+    @apply bg-palmiak_pink/5 border-palmiak_pink hover:bg-palmiak_pink;
 }
 
 .blog-item-tags a:nth-child(2) {
-    @apply bg-palmiak_blue bg-opacity-5 border-palmiak_blue hover:bg-palmiak_blue hover:bg-opacity-50;
+    @apply bg-palmiak_blue/5 border-palmiak_blue hover:bg-palmiak_blue/50;
 }
 
 .blog-item-tags a:nth-child(3) {
-    @apply bg-palmiak_green bg-opacity-5 border-palmiak_green hover:bg-palmiak_green;
+    @apply bg-palmiak_green/5 border-palmiak_green hover:bg-palmiak_green;
 }
 
 .blog-item-tags a:nth-child(4) {
-    @apply bg-palmiak_lightdark bg-opacity-5 border-palmiak_lightdark hover:bg-palmiak_lightdark;
+    @apply bg-palmiak_lightdark/5 border-palmiak_lightdark hover:bg-palmiak_lightdark;
 }
 
 hr.gradient-line {
-    @apply relative h-[1px] w-[110px] bg-gradient-to-r from-palmiak_pink via-palmiak_green to-palmiak_blue border-none after:absolute after:w-full after:h-full after:z-10 after:top-0 after:left-0 after:border-[1px] after:border-palmiak_bg after:border-dashed;
+    @apply relative h-[1px] w-[110px] bg-linear-to-r from-palmiak_pink via-palmiak_green to-palmiak_blue border-none after:absolute after:w-full after:h-full after:z-10 after:top-0 after:left-0 after:border-[1px] after:border-palmiak_bg after:border-dashed;
 }
 
 @keyframes gradient-animation {
@@ -199,7 +217,7 @@ hr.gradient-line {
     width: calc(100% + var(--borderWidth) * 2);
     background-size: 300% 300%;
     z-index: -1;
-    @apply absolute opacity-0 rounded-2xl duration-150 bg-gradient-to-br from-palmiak_pink via-palmiak_green to-palmiak_blue;
+    @apply absolute opacity-0 rounded-2xl duration-150 bg-linear-to-br from-palmiak_pink via-palmiak_green to-palmiak_blue;
 }
 
 .gradient-border:hover:after {
@@ -264,25 +282,25 @@ hr.gradient-line {
     prose-p:text-white
     prose-a:text-white
     prose-a:underline
-    hover:prose-a:text-palmiak_blue
+    prose-a:hover:text-palmiak_blue
     prose-a:transition-all
     prose-a:duration-150
 }
 
 .custom-substack-widget {
-    @apply grow w-full shrink basis-0 p-4 md:p-7 max-[700px]:p-0 bg-white bg-opacity-5 max-[700px]:bg-opacity-0 rounded-2xl border max-[700px]:border-none border-white border-opacity-20 flex-col justify-start items-center gap-3.5 inline-flex !important;
+    @apply grow! w-full! shrink! basis-0! p-4! md:p-7! max-[700px]:p-0! bg-white/5! max-[700px]:bg-white/0! rounded-2xl! border! max-[700px]:border-none! border-white/20! flex-col! justify-start! items-center! gap-3.5! inline-flex!;
     max-width:100%!important;
 }
 
 .custom-substack-widget input {
-    @apply border-none outline-none grow shrink basis-0 self-stretch text-center text-palmiak_bg text-lg font-normal font-palmiak-font leading-loose rounded-3xl px-8 py-5 !important;
+    @apply border-none! outline-hidden! grow! shrink! basis-0! self-stretch! text-center! text-palmiak_bg! text-lg! font-normal! font-palmiak-font! leading-loose! rounded-3xl! px-8! py-5!;
 }
 .custom-substack-widget button {
-    @apply self-stretch text-white text-base font-medium font-palmiak-font-title tracking-wide px-8 py-5 bg-palmiak_bg rounded-3xl justify-center items-center gap-2.5 inline-flex transition-all duration-150 hover:bg-opacity-75 !important;
+    @apply self-stretch! text-white! text-base! font-medium! font-palmiak-font-title! tracking-wide! px-8! py-5! bg-palmiak_bg! rounded-3xl! justify-center! items-center! gap-2.5! inline-flex! transition-all! duration-150! hover:bg-palmiak_bg/75!;
 }
 
 .custom-substack-widget+.error {
-    @apply text-white !important;
+    @apply text-white!;
 }
 
 .prose-post {
@@ -297,8 +315,8 @@ hr.gradient-line {
     prose-blockquote:font-palmiak-font-title
     prose-ol:font-palmiak-font
     prose-ul:font-palmiak-font
-    hover:prose-a:text-palmiak_green
-    hover:prose-a:prose-strong:text-palmiak_green
+    prose-a:hover:text-palmiak_green
+    prose-strong:prose-a:hover:text-palmiak_green
     prose-headings:relative
     prose-headings:pb-[24px]
     prose-headings:before:w-[110px]
@@ -307,7 +325,7 @@ hr.gradient-line {
     prose-headings:before:bottom-[0px]
     prose-headings:before:left-0
     prose-headings:before:z-10
-    prose-headings:before:bg-gradient-to-r
+    prose-headings:before:bg-linear-to-r
     prose-headings:before:from-palmiak_pink
     prose-headings:before:via-palmiak_green
     prose-headings:before:to-palmiak_blue
@@ -325,30 +343,29 @@ hr.gradient-line {
     prose-figcaption:text-center
     prose-figcaption:font-palmiak-font-title
     prose-figcaption:text-white/80
-    prose-p:prose-figcaption:font-palmiak-font-title
-    prose-p:prose-figcaption:tracking-widest
+    prose-figcaption:prose-p:font-palmiak-font-title
+    prose-figcaption:prose-p:tracking-widest
     prose-a:transition-all
     prose-a:duration-150
     prose-pre:bg-palmiak_bg
     prose-pre:border
-    prose-pre:border-indigo-950
-    prose-pre:border-opacity-50;
+    prose-pre:border-indigo-950/50
 }
 .type div {
     @apply
-    px-4 pt-1.5 pb-2 rounded-3xl border-[1.5px] text-[12px] border-dashed justify-end items-center gap-2.5 flex transition-all duration-150 text-white/90 text-white text-xs font-normal font-palmiak-font-title tracking-wide;
+    px-4 pt-1.5 pb-2 rounded-3xl border-[1.5px] text-[12px] border-dashed justify-end items-center gap-2.5 flex transition-all duration-150 text-white text-xs font-normal font-palmiak-font-title tracking-wide;
 }
 
 .type .podcast {
-    @apply bg-palmiak_pink bg-opacity-10 border-palmiak_pink;
+    @apply bg-palmiak_pink/10 border-palmiak_pink;
 }
 
 .type .webinar {
-    @apply bg-palmiak_green bg-opacity-10 border-palmiak_green;
+    @apply bg-palmiak_green/10 border-palmiak_green;
 }
 
 .type .article {
-    @apply bg-palmiak_blue bg-opacity-10 border-palmiak_blue;
+    @apply bg-palmiak_blue/10 border-palmiak_blue;
 }
 
 pre code.hljs {
@@ -357,7 +374,7 @@ pre code.hljs {
 }
 
 #progress {
-    @apply bg-gradient-to-br from-palmiak_pink via-palmiak_green to-palmiak_blue;
+    @apply bg-linear-to-br from-palmiak_pink via-palmiak_green to-palmiak_blue;
     height: 3px;
     position: fixed;
     top: 0;
