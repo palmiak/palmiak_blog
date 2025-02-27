@@ -8,7 +8,7 @@
         "laravel"
     ],
     "type": "project",
-    "repositories":[
+    "repositories": [
         {
             "type": "vcs",
             "url": "https://github.com/palmiak/statamic-feedamic/"

@@ -4,6 +4,8 @@
 
 @config '../../tailwind.config.js';
 
+@plugin "@tailwindcss/typography" ;
+
 @utility palmiak-image {
   &.image {
     @apply rounded-xl;
@@ -315,6 +317,7 @@ hr.gradient-line {
     prose-blockquote:font-palmiak-font-title
     prose-ol:font-palmiak-font
     prose-ul:font-palmiak-font
+    prose-a:text-white
     prose-a:hover:text-palmiak_green
     prose-strong:prose-a:hover:text-palmiak_green
     prose-headings:relative
