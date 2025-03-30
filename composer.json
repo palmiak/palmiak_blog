@@ -12,6 +12,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/palmiak/statamic-feedamic/"
+        },
+        {
+            "type": "path",
+            "url": "addons/palmiak/better-link-pasting"
         }
     ],
     "require": {
@@ -19,6 +23,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^10.0",
         "laravel/tinker": "^2.5",
+        "palmiak/better-link-pasting": "*@dev",
         "palmiak/feedamic": "dev-main",
         "palmiak/unicon-for-statamic": "^0.4.1",
         "statamic/cms": "^5.38",

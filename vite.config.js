@@ -6,6 +6,7 @@ export default defineConfig({
         laravel([
             'resources/css/web.css',
             'resources/js/web.js',
+
         ]),
     ],
 });

@@ -9,7 +9,6 @@ preferences:
         - title
         - slug
         - date
-        - thumbnail
       after_save: continue_editing
       filters:
         published:

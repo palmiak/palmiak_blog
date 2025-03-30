@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Statamic\Statamic;
 
 class AppServiceProvider extends ServiceProvider
 {

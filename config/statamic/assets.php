@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Contracts\Concurrency\Driver;
+
 return [
 
     'image_manipulation' => [
@@ -52,7 +54,7 @@ return [
         |
         */
 
-        'cache' => false,
+        'cache' => true,
         'cache_path' => public_path('img'),
 
         /*

@@ -6,6 +6,7 @@
 /public/css
 /public/buid
 /public/build/assets
+/public/img
 /storage/*.key
 /vendor
 .env
