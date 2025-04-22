@@ -115,6 +115,14 @@ tabs:
                 - tags
               display: Tags
               mode: select
+          -
+            handle: series
+            field:
+              type: terms
+              taxonomies:
+                - series
+              display: Series
+              mode: select
   social:
     display: Social
     sections:
