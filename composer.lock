@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8718ecff6b2ef0d331ea432a655acf5e",
+    "content-hash": "cfc1ae69769c551539b53bbe0b5ad0a1",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -4291,6 +4291,74 @@
             "time": "2023-07-19T18:28:44+00:00"
         },
         {
+            "name": "spatie/browsershot",
+            "version": "4.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/browsershot.git",
+                "reference": "3ff350cd0a36943759e2932a27d8cd18c11e5fdc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/browsershot/zipball/3ff350cd0a36943759e2932a27d8cd18c11e5fdc",
+                "reference": "3ff350cd0a36943759e2932a27d8cd18c11e5fdc",
+                "shasum": ""
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "ext-json": "*",
+                "php": "^8.2",
+                "spatie/temporary-directory": "^2.0",
+                "symfony/process": "^6.0|^7.0"
+            },
+            "require-dev": {
+                "pestphp/pest": "^1.20",
+                "spatie/image": "^3.6",
+                "spatie/pdf-to-text": "^1.52",
+                "spatie/phpunit-snapshot-assertions": "^4.2.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Browsershot\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://github.com/freekmurze",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Convert a webpage to an image or pdf using headless Chrome",
+            "homepage": "https://github.com/spatie/browsershot",
+            "keywords": [
+                "chrome",
+                "convert",
+                "headless",
+                "image",
+                "pdf",
+                "puppeteer",
+                "screenshot",
+                "webpage"
+            ],
+            "support": {
+                "source": "https://github.com/spatie/browsershot/tree/4.4.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-11-25T16:02:22+00:00"
+        },
+        {
             "name": "spatie/error-solutions",
             "version": "1.1.3",
             "source": {
@@ -4582,6 +4650,67 @@
             "time": "2025-02-21T14:16:57+00:00"
         },
         {
+            "name": "spatie/temporary-directory",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/temporary-directory.git",
+                "reference": "580eddfe9a0a41a902cac6eeb8f066b42e65a32b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/temporary-directory/zipball/580eddfe9a0a41a902cac6eeb8f066b42e65a32b",
+                "reference": "580eddfe9a0a41a902cac6eeb8f066b42e65a32b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\TemporaryDirectory\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Vanderbist",
+                    "email": "alex@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Easily create, use and destroy temporary directories",
+            "homepage": "https://github.com/spatie/temporary-directory",
+            "keywords": [
+                "php",
+                "spatie",
+                "temporary-directory"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/temporary-directory/issues",
+                "source": "https://github.com/spatie/temporary-directory/tree/2.3.0"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-01-13T13:04:43+00:00"
+        },
+        {
             "name": "statamic/cms",
             "version": "v5.52.0",
             "source": {
@@ -4858,6 +4987,162 @@
                 }
             ],
             "time": "2025-02-21T23:40:49+00:00"
+        },
+        {
+            "name": "stillat/social-media-image-kit",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Stillat/social-media-image-kit.git",
+                "reference": "7f4f44b680df9f62e91d26ec8caa05ba9f6eb92d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Stillat/social-media-image-kit/zipball/7f4f44b680df9f62e91d26ec8caa05ba9f6eb92d",
+                "reference": "7f4f44b680df9f62e91d26ec8caa05ba9f6eb92d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1",
+                "spatie/browsershot": "^4",
+                "statamic/cms": "^4 || ^5",
+                "stillat/statamic-attribute-renderer": "^1.1",
+                "stillat/statamic-template-resolver": "^1.1"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.13"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Stillat\\SocialMediaImageKit\\ServiceProvider"
+                    ]
+                },
+                "statamic": {
+                    "name": "Social Media Image Kit",
+                    "description": "Social Media Image Kit addon"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stillat\\SocialMediaImageKit\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "support": {
+                "issues": "https://github.com/Stillat/social-media-image-kit/issues",
+                "source": "https://github.com/Stillat/social-media-image-kit/tree/v1.3.0"
+            },
+            "time": "2024-08-28T15:34:25+00:00"
+        },
+        {
+            "name": "stillat/statamic-attribute-renderer",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Stillat/statamic-attribute-renderer.git",
+                "reference": "8e2c038e4e338b1690ee9580401a690a4bab4862"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Stillat/statamic-attribute-renderer/zipball/8e2c038e4e338b1690ee9580401a690a4bab4862",
+                "reference": "8e2c038e4e338b1690ee9580401a690a4bab4862",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1",
+                "statamic/cms": "^4 || ^5"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^8.14",
+                "pestphp/pest": "^2.24",
+                "pestphp/pest-plugin-laravel": "^2.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Stillat\\StatamicAttributeRenderer\\ServiceProvider"
+                    ]
+                },
+                "statamic": {
+                    "name": "Attribute Renderer for Statamic",
+                    "description": "A simple utility addon for Statamic that provides a simple way to render HTML attributes, with advanced variable handling features."
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Stillat\\StatamicAttributeRenderer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "support": {
+                "issues": "https://github.com/Stillat/statamic-attribute-renderer/issues",
+                "source": "https://github.com/Stillat/statamic-attribute-renderer/tree/v1.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/JohnathonKoster",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-05-11T20:02:16+00:00"
+        },
+        {
+            "name": "stillat/statamic-template-resolver",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Stillat/statamic-template-resolver.git",
+                "reference": "565bdffcd702bc3fd6287e45e1cbb80ac328e718"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Stillat/statamic-template-resolver/zipball/565bdffcd702bc3fd6287e45e1cbb80ac328e718",
+                "reference": "565bdffcd702bc3fd6287e45e1cbb80ac328e718",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0",
+                "statamic/cms": "^4 || ^5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": []
+                },
+                "statamic": {
+                    "name": "Statamic Template Resolver",
+                    "description": "Provides utilities to resolve templates based on an entry's collection or blueprint handles, with support for a fallback template."
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stillat\\StatamicTemplateResolver\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "support": {
+                "issues": "https://github.com/Stillat/statamic-template-resolver/issues",
+                "source": "https://github.com/Stillat/statamic-template-resolver/tree/v1.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/JohnathonKoster",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-05-11T20:09:44+00:00"
         },
         {
             "name": "symfony/console",

@@ -27,7 +27,8 @@
         "palmiak/feedamic": "dev-main",
         "palmiak/unicon-for-statamic": "^0.4.1",
         "statamic/cms": "^5.38",
-        "statamic/ssg": "^3"
+        "statamic/ssg": "^3",
+        "stillat/social-media-image-kit": "^1.3"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
